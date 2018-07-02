@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150px"
+    android:background="@drawable/bg_title">
+
+    <ImageView
+        android:id="@+id/iv_device_name"
+        android:layout_width="126px"
+        android:layout_height="126px"
+        android:layout_margin="12px"
+        android:background="@drawable/bg_roundcorner_white_solid"
+        android:scaleType="center"
+        android:src="@drawable/cam_bottom" />
+
+    <EditText
+        android:id="@+id/tv_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_device_name"
+        android:background="@null"
+        android:hint="请输入设备名称"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="40px" />
+
+</RelativeLayout>

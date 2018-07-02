@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/result_pop_scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/wechatbackcolor"
+    android:fadingEdge="vertical"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:scrollbars="vertical">
+
+
+    <include layout="@layout/table_title" />
+
+    <include layout="@layout/table_name" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="25px"
+                android:paddingRight="25px">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/bg_username"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="整体描述:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/room_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="控制室名称"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/bg_username"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="整体描述:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/des"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="整体描述"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/bg_username"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="1#电压(V):"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/voltage1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入数值"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="V"
+                        android:textColor="@color/gray"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/bg_username"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="2#电压(V):"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/voltage2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入数值"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="V"
+                        android:textColor="@color/gray"
+                        android:textSize="30px" />
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/bg_username"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="均设置空开:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/airswitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/as_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:text="已设"
+                            android:textColor="@color/radiobutton_green_select" />
+
+                        <RadioButton
+                            android:id="@+id/as_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="未设"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/bg_username"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="电源滤波器:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/powerfilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/pf_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="已使用"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/pf_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="未使用"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="隐患:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view"/>
+
+                    <Switch
+                        android:id="@+id/switchs_bad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="问题及建议:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/suggestion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:hint="备注"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:maxLines="5"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="top|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="附件:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <ImageView
+                        android:id="@+id/iv_add1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left|top" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="132px" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/bottom_tab" />
+
+    </RelativeLayout>
+
+</LinearLayout>

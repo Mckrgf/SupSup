@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:icon="@drawable/ic_update_white"
+        android:id="@+id/menu_update"
+        android:title="更新计划"
+        app:showAsAction ="always" />
+
+    <item
+        android:icon="@drawable/ic_map_white"
+        android:id="@+id/menu_map"
+        android:title="地图展示"
+        app:showAsAction ="always"/>
+
+    <item
+        android:icon="@drawable/search"
+        android:id="@+id/menu_his"
+        android:title="历史查询"
+        app:showAsAction ="always"/>
+</menu>

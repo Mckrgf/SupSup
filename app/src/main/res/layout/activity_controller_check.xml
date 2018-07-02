@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/result_pop_scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/wechatbackcolor"
+    android:fadingEdge="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <include layout="@layout/table_title" />
+
+    <include layout="@layout/table_name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="控制器地址:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <EditText
+                            android:id="@+id/controller_site"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:hint="请输入控制器地址"
+                            android:inputType="text"
+                            android:minWidth="300px"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="控制器类型:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <EditText
+                            android:id="@+id/controller_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:hint="请输入控制柜类型"
+                            android:inputType="text"
+                            android:minWidth="300px"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="控制CPU软件版本:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <EditText
+                            android:id="@+id/controllercpu_version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:hint="请输入版本"
+                            android:inputType="text"
+                            android:minWidth="300px"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="控制网通讯CPU软件版本:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <EditText
+                            android:id="@+id/net_commucpu_version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:hint="请输入版本"
+                            android:inputType="text"
+                            android:minWidth="300px"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="I/O通讯CPU软件版本:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <EditText
+                            android:id="@+id/io_commucpu_version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:hint="请输入版本"
+                            android:inputType="text"
+                            android:minWidth="300px"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="冗余状态:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/redundancy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rs_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="正常"
+                                android:textColor="@color/radiobutton_green_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/rs_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="异常"
+                                android:textColor="@color/radiobutton_red_select"
+                                android:textSize="30px" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="组态状态:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/config"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/cs_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="正常"
+                                android:textColor="@color/radiobutton_green_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/cs_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="异常"
+                                android:textColor="@color/radiobutton_red_select"
+                                android:textSize="30px" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="用户程序状态:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/userprogram_running"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/ps_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="正常"
+                                android:textColor="@color/radiobutton_green_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/ps_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="异常"
+                                android:textColor="@color/radiobutton_red_select" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="控制网通讯:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/scnet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/scnet_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="正常"
+                                android:textColor="@color/radiobutton_green_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/scnet_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="异常"
+                                android:textColor="@color/radiobutton_red_select"
+                                android:textSize="30px" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="E-BUS通讯:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/ebus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/ebus_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="正常"
+                                android:textColor="@color/radiobutton_green_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/ebus_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="异常"
+                                android:textColor="@color/radiobutton_red_select" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="L-BUS通讯:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/lbus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/lbus_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="正常"
+                                android:textColor="@color/radiobutton_green_select" />
+
+                            <RadioButton
+                                android:id="@+id/lbus_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="异常"
+                                android:textColor="@color/radiobutton_red_select" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="控制器负荷:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/load"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/cl_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="正常"
+                                android:textColor="@color/radiobutton_green_select" />
+
+                            <RadioButton
+                                android:id="@+id/cl_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="异常"
+                                android:textColor="@color/radiobutton_red_select" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="控制器电池:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/cellvoltage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/cb_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="正常"
+                                android:textColor="@color/radiobutton_green_select" />
+
+                            <RadioButton
+                                android:id="@+id/cb_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="异常"
+                                android:textColor="@color/radiobutton_red_select" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="控制器温度:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/temperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/ct_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="正常"
+                                android:textColor="@color/radiobutton_green_select" />
+
+                            <RadioButton
+                                android:id="@+id/ct_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="异常"
+                                android:textColor="@color/radiobutton_red_select" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OOS状态:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/io_oos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/oos_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="无"
+                                android:textColor="@color/radiobutton_green_select" />
+
+                            <RadioButton
+                                android:id="@+id/oos_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="有"
+                                android:textColor="@color/radiobutton_red_select" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="强制状态:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/io_constraint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/force_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="无"
+                                android:textColor="@color/radiobutton_green_select" />
+
+                            <RadioButton
+                                android:id="@+id/force_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="有"
+                                android:textColor="@color/radiobutton_red_select" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AI超量程:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/analog_beyond"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/limit_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="无"
+                                android:textColor="@color/radiobutton_green_select" />
+
+                            <RadioButton
+                                android:id="@+id/limit_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="有"
+                                android:textColor="@color/radiobutton_red_select" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/bg_username"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DI抖动:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/di_joggle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/di_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="无"
+                                android:textColor="@color/radiobutton_green_select" />
+
+                            <RadioButton
+                                android:id="@+id/di_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="有"
+                                android:textColor="@color/radiobutton_red_select" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="问题及建议:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+
+                        <EditText
+                            android:id="@+id/suggestion"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:hint="备注"
+                            android:imeOptions="actionDone"
+                            android:inputType="textMultiLine"
+                            android:maxLines="5"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/divider_gray_hor" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="top|left"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="附件:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <ImageView
+                            android:id="@+id/iv_add1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:gravity="left|top" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="132px" />
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <include layout="@layout/bottom_tab" />
+    </RelativeLayout>
+
+
+</LinearLayout>

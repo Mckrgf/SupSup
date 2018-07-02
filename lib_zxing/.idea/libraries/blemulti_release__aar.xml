@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="blemulti-release:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/blemulti-release.aar/05c36965a98741b79a75b2505b75d8d8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/blemulti-release.aar/05c36965a98741b79a75b2505b75d8d8/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/blue_bar"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/im_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/back_white" />
+
+    <TextView
+        android:id="@+id/tv_cpName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/im_back"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="控制柜供电"
+        android:textColor="@color/white"
+        android:textSize="35px" />
+
+    <ImageView
+        android:id="@+id/im_erase"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_donot" />
+
+</RelativeLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="keys">
+
+        <item>room_name</item>
+        <item>控制室名称</item>
+        <item>des</item>
+        <item>整体描述</item>
+        <item>voltage1</item>
+        <item>1#电压(V)</item>
+        <item>voltage2</item>
+        <item>2#电压(V)</item>
+        <item>airswitch</item>
+        <item>均设置空开</item>
+        <item>powerfilter</item>
+        <item>电源滤波器</item>
+        <item>suggestion</item>
+        <item>问题及建议</item>
+
+        <item>cabinet_id</item>
+        <item>控制柜编号</item>
+        <item>twinsupply</item>
+        <item>两路供电</item>
+        <item>diameter_beyond</item>
+        <item>线径≥2.5</item>
+        <item>system_a_input</item>
+        <item>A 电压(V)</item>
+        <item>system_b_input</item>
+        <item>B 电压(V)</item>
+        <item>power1</item>
+        <item>1#24V电源</item>
+        <item>power2</item>
+        <item>2#24V电源</item>
+        <item>power3</item>
+        <item>3#24V电源</item>
+        <item>power4</item>
+        <item>4#24V电源</item>
+        <item>power5</item>
+        <item>5#24V电源</item>
+        <item>power6</item>
+        <item>6#24V电源</item>
+
+
+        <item>earthing_form</item>
+        <item>接    地:</item>
+        <item>electric_distance_beyond</item>
+        <item>电气地</item>
+        <item>lightning_distance_beyond</item>
+        <item>避雷地</item>
+        <item>line_length_less</item>
+        <item>接地线</item>
+        <item>trunkline_diameter_beyond</item>
+        <item>总干线径</item>
+        <item>resistance_less</item>
+        <item>接地电阻</item>
+        <item>resistance_measurement</item>
+        <item>测量方法</item>
+        <item>totalline_leakcurrent</item>
+        <item>总干线漏电流（mA）</item>
+
+
+        <item>humiture</item>
+        <item>温湿度</item>
+        <item>emi</item>
+        <item>电磁场</item>
+        <item>powerlight</item>
+        <item>电源灯</item>
+        <item>cardlight</item>
+        <item>卡件灯</item>
+        <item>interchanger</item>
+        <item>交换机</item>
+        <item>networknode</item>
+        <item>网络节点</item>
+        <item>networkcable</item>
+        <item>网络线</item>
+        <item>fan</item>
+        <item>机柜风扇</item>
+        <item>door_close</item>
+        <item>柜门关闭</item>
+        <item>staticfree</item>
+        <item>防静电</item>
+        <item>airtightness</item>
+        <item>机柜密闭</item>
+        <item>connectingline</item>
+        <item>接地连接</item>
+        <item>cable_marking</item>
+        <item>线缆标识</item>
+        <item>airswitch_marking</item>
+        <item>空开标识</item>
+        <item>sparechannel_margin</item>
+        <item>备用通道余量</item>
+        <item>rats</item>
+        <item>鼠患</item>
+
+
+
+        <item>controller_site</item>
+        <item>控制器地址</item>
+        <item>controller_type</item>
+        <item>控制器类型</item>
+        <item>controllercpu_version</item>
+        <item>控制CPU软件版本</item>
+        <item>net_commucpu_version</item>
+        <item>控制网通讯CPU软件版本</item>
+        <item>io_commucpu_version</item>
+        <item>I/O通讯CPU软件版本</item>
+        <item>redundancy</item>
+        <item>冗余状态</item>
+        <item>config</item>
+        <item>组态状态</item>
+        <item>userprogram_running</item>
+        <item>用户程序状态</item>
+        <item>scnet</item>
+        <item>控制网通讯</item>
+        <item>ebus</item>
+        <item>E-BUS通讯</item>
+        <item>lbus</item>
+        <item>L-BUS通讯</item>
+        <item>load</item>
+        <item>控制器负荷</item>
+        <item>cellvoltage</item>
+        <item>控制器电池</item>
+        <item>temperature</item>
+        <item>控制器温度</item>
+        <item>io_oos</item>
+        <item>OOS状态</item>
+        <item>io_constraint</item>
+        <item>强制状态</item>
+        <item>analog_beyond</item>
+        <item>AI超量程</item>
+        <item>di_joggle</item>
+        <item>DI抖动</item>
+
+
+
+        <item>operator_site</item>
+        <item>操作站地址</item>
+        <item>software_version</item>
+        <item>软件版本</item>
+        <item>patch</item>
+        <item>补丁</item>
+        <item>operatingsystem</item>
+        <item>操作系统</item>
+        <item>disk_freespace</item>
+        <item>剩余空间（M）</item>
+        <item>cpu_usingrate</item>
+        <item>CPU使用率</item>
+        <item>memory_total</item>
+        <item>全部内存大小</item>
+        <item>memory_used</item>
+        <item>已用内存大小</item>
+        <item>machines_timesync</item>
+        <item>时间同步</item>
+        <item>configserver_confsync</item>
+        <item>服务器组态一致</item>
+        <item>lower_configsync</item>
+        <item>下位机版本一致</item>
+        <item>ip_addr</item>
+        <item>IP地址设置</item>
+        <item>harddisk_norm</item>
+        <item>硬盘分区</item>
+        <item>drivermax</item>
+        <item>驱动安装</item>
+        <item>hyperthreading_closed</item>
+        <item>超线程状态</item>
+        <item>netcardflow_closed</item>
+        <item>网卡控制流</item>
+        <item>colors_show</item>
+        <item>颜色设置</item>
+        <item>noothersoftware</item>
+        <item>其它软件</item>
+        <item>loadlist</item>
+        <item>启动加载</item>
+        <item>dataresponse</item>
+        <item>数据响应</item>
+        <item>stationprocess</item>
+        <item>操作站进程</item>
+        <item>turnalarm</item>
+        <item>翻页+报警</item>
+        <item>projectdirectory</item>
+        <item>工程目录</item>
+        <item>tendency</item>
+        <item>历史趋势</item>
+        <item>clock</item>
+        <item>计算机时钟</item>
+        <item>faultdiagnosis</item>
+        <item>故障诊断</item>
+        <item>machines_configsync</item>
+        <item>上下位机组态</item>
+        <item>configissue</item>
+        <item>组态发布</item>
+        <item>commuredundancy</item>
+        <item>通讯冗余</item>
+
+
+        <item>historicalcontract_id</item>
+        <item>合同编号</item>
+        <item>fcu712</item>
+        <item>FCU712</item>
+        <item>com711</item>
+        <item>COM711</item>
+        <item>com741</item>
+        <item>COM741</item>
+        <item>ai711</item>
+        <item>AI711</item>
+        <item>ai721</item>
+        <item>AI712</item>
+        <item>am712</item>
+        <item>AM712</item>
+        <item>ai731</item>
+        <item>AI731</item>
+        <item>ao711</item>
+        <item>AO711</item>
+        <item>di711</item>
+        <item>DI711</item>
+        <item>do711</item>
+        <item>DO711</item>
+        <item>do712</item>
+        <item>DO712</item>
+        <item>tu713_r1200</item>
+        <item>TU713_R1200</item>
+        <item>tu721_r00</item>
+        <item>TU721_R00</item>
+        <item>tu721_r01</item>
+        <item>TU721_R01</item>
+        <item>tua712_dor16</item>
+        <item>TUA712_DOR16</item>
+        <item>tua711_dor16</item>
+        <item>TUA711_DOR16</item>
+
+    </string-array>
+
+
+
+    <string-array name="results">
+        <item>正常</item>
+        <item>异常</item>
+    </string-array>
+
+    <string-array name="badlevels">
+        <item>无故障</item>
+        <item>轻故障</item>
+        <item>重故障</item>
+    </string-array>
+
+    <string-array name="myaction">
+        <item>无需上报</item>
+        <item>上报隐患</item>
+    </string-array>
+
+</resources>

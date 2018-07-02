@@ -1,0 +1,4 @@
+include ':app', ':ocr_ui'
+include ':lib_zxing'
+
+
