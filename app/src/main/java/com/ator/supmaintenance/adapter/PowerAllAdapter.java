@@ -1,5 +1,6 @@
 package com.ator.supmaintenance.adapter;
 
+import com.ator.supmaintenance.item.MyApplication;
 import com.bumptech.glide.BitmapTypeRequest;
 
 import org.json.JSONArray;
@@ -32,8 +33,7 @@ public class PowerAllAdapter {
 
     public JSONObject  jobj = null;
     public JSONObject  jNetObj = null;
-//    public static String  strURL = "http://118.31.42.34:8090/maintenance/bulksupply";
-    public static String  strURL = "http://192.168.8.104:8080/maintenance/bulksupply";
+    public static String  strURL = MyApplication.base_url + "/maintenance/bulksupply";
 
 
     public boolean CheckAll(){

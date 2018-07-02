@@ -1,5 +1,7 @@
 package com.ator.supmaintenance.adapter;
 
+import com.ator.supmaintenance.item.MyApplication;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,20 +28,19 @@ public class CabinetCorrosionAdapter {
     public String append;
     public long plandate;
 
-    public JSONObject  jobj = null;
-    public JSONObject  jNetObj = null;
-//    public static String  strURL = "http://118.31.42.34:8090/maintenance/cabinetCorrosionDetection";
-    public static String  strURL = "http://192.168.8.104:8080/maintenance/cabinetCorrosionDetection";
+    public JSONObject jobj = null;
+    public JSONObject jNetObj = null;
+    public static String strURL = MyApplication.base_url + "/maintenance/cabinetCorrosionDetection";
 
-    public boolean CheckAll(){
-        if (        "".equals(cabinet_name)
-                ||  "".equals(airtight)
-                ||  "".equals(entry_hole)
-                ||  "".equals(grounding_bare)
-                ||  "".equals(scene_bare)
-                ||  "".equals(iron_screw)
+    public boolean CheckAll() {
+        if ("".equals(cabinet_name)
+                || "".equals(airtight)
+                || "".equals(entry_hole)
+                || "".equals(grounding_bare)
+                || "".equals(scene_bare)
+                || "".equals(iron_screw)
 
-                ){
+                ) {
 
             return false;
         }
@@ -48,32 +49,32 @@ public class CabinetCorrosionAdapter {
         return true;
     }
 
-    public void MakeJasonObj(){
+    public void MakeJasonObj() {
 
-        if(jobj != null){
+        if (jobj != null) {
             jobj = null;
         }
 
-        if (jNetObj!= null){
+        if (jNetObj != null) {
             jNetObj = null;
         }
 
 
         jobj = new JSONObject();
-        try{
+        try {
 
-            jobj.put("cabinet_name",cabinet_name);
-            jobj.put("room_id",room_id);
-            jobj.put("airtight",airtight);
-            jobj.put("entry_hole",entry_hole);
-            jobj.put("grounding_bare",grounding_bare);
-            jobj.put("scene_bare",scene_bare);
-            jobj.put("iron_screw",iron_screw);
-            jobj.put("suggestion",suggestion);
-            jobj.put("append",append);
-            jobj.put("plandate",plandate);
+            jobj.put("cabinet_name", cabinet_name);
+            jobj.put("room_id", room_id);
+            jobj.put("airtight", airtight);
+            jobj.put("entry_hole", entry_hole);
+            jobj.put("grounding_bare", grounding_bare);
+            jobj.put("scene_bare", scene_bare);
+            jobj.put("iron_screw", iron_screw);
+            jobj.put("suggestion", suggestion);
+            jobj.put("append", append);
+            jobj.put("plandate", plandate);
 
-        }catch (JSONException e) {
+        } catch (JSONException e) {
             e.printStackTrace();
         }
 
@@ -83,60 +84,60 @@ public class CabinetCorrosionAdapter {
             JSONArray jAry = new JSONArray();
             JSONObject jItem = new JSONObject();
 
-            jItem.put("cabinet_name",cabinet_name);
-            jItem.put("room_id",room_id);
-            jItem.put("airtight",airtight);
-            jItem.put("entry_hole",entry_hole);
-            jItem.put("grounding_bare",grounding_bare);
-            jItem.put("scene_bare",scene_bare);
-            jItem.put("iron_screw",iron_screw);
-            jItem.put("suggestion",suggestion);
+            jItem.put("cabinet_name", cabinet_name);
+            jItem.put("room_id", room_id);
+            jItem.put("airtight", airtight);
+            jItem.put("entry_hole", entry_hole);
+            jItem.put("grounding_bare", grounding_bare);
+            jItem.put("scene_bare", scene_bare);
+            jItem.put("iron_screw", iron_screw);
+            jItem.put("suggestion", suggestion);
 
             jAry.put(jItem);
-            jNetObj.put("cabinetSupplyList",jAry);
-            jNetObj.put("plandate",plandate);
-            jNetObj.put("filename",room_id+".xlsx");
+            jNetObj.put("cabinetSupplyList", jAry);
+            jNetObj.put("plandate", plandate);
+            jNetObj.put("filename", room_id + ".xlsx");
 
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
 
-    public String GetJasonString(){
-        if (jobj == null){
+    public String GetJasonString() {
+        if (jobj == null) {
             return "";
-        }else{
+        } else {
             String strout = jobj.toString();
-            return  strout;
+            return strout;
         }
     }
 
-    public String GetNetJasonString(){
-        if (jNetObj == null){
+    public String GetNetJasonString() {
+        if (jNetObj == null) {
             return "";
-        }else{
+        } else {
             String strout = jNetObj.toString();
-            return  strout;
+            return strout;
         }
     }
 
-    public void MakeID(boolean bAppend){
+    public void MakeID(boolean bAppend) {
         //use time
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");// HH:mm:ss
         //获取当前时间
         Date date = new Date(System.currentTimeMillis());
         room_id = simpleDateFormat.format(date);
 
-        if (bAppend){
-            append = room_id+".png";
+        if (bAppend) {
+            append = room_id + ".png";
         }
 
-        try{
+        try {
             Date dateNoMill = simpleDateFormat.parse(room_id);
             plandate = dateNoMill.getTime();
 
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -1,5 +1,7 @@
 package com.ator.supmaintenance.adapter;
 
+import com.ator.supmaintenance.item.MyApplication;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,7 +35,7 @@ public class CabinetAdapter {
 
     public JSONObject  jobj = null;
     public JSONObject  jNetObj = null;
-    public static String  strURL = "http://118.31.42.34:8090/maintenance/cabinetsupply";
+    public static String  strURL = MyApplication.base_url + "/maintenance/cabinetsupply";
 
     public boolean CheckAll(){
         if (        "".equals(cabinet_id)
