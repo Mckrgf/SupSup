@@ -79,7 +79,7 @@ public class ControlCabinetAdapter {
         jobj = new JSONObject();
         try {
 
-            jobj.put("cabinet_id", cabinet_id);
+            jobj.put("control_cabinet_num", cabinet_id);
             jobj.put("room_id", room_id);
             jobj.put("neatly_cabled", neatly_cabled);
             jobj.put("line_identified", line_identified);
@@ -93,6 +93,7 @@ public class ControlCabinetAdapter {
             jobj.put("db_contact", db_contact);
             jobj.put("distribution_contact", distribution_contact);
             jobj.put("power_contact", power_contact);
+            jobj.put("has_plague",plague);
 
             jobj.put("suggestion", suggestion);
             jobj.put("append", append);
@@ -108,20 +109,21 @@ public class ControlCabinetAdapter {
             JSONArray jAry = new JSONArray();
             JSONObject jItem = new JSONObject();
 
-            jItem.put("cabinet_id", cabinet_id);
-            jItem.put("room_id", room_id);
-            jItem.put("neatly_cabled", neatly_cabled);
-            jItem.put("line_identified", line_identified);
-            jItem.put("use_line_nose", use_line_nose);
-            jItem.put("layer_grounding", layer_grounding);
-            jItem.put("shielded_cable_one", shielded_cable_one);
-            jItem.put("shielded_cable_two", shielded_cable_two);
-            jItem.put("separate_line_one", separate_line_one);
-            jItem.put("separate_line_two", separate_line_two);
-            jItem.put("sbus_contact", sbus_contact);
-            jItem.put("db_contact", db_contact);
-            jItem.put("distribution_contact", distribution_contact);
-            jItem.put("power_contact", power_contact);
+            jItem.put("control_cabinet_num", cabinet_id);
+            jItem.put("has_room_id", room_id);
+            jItem.put("has_neatly_cabled", neatly_cabled);
+            jItem.put("has_line_identified", line_identified);
+            jItem.put("has_use_line_nose", use_line_nose);
+            jItem.put("has_layer_grounding", layer_grounding);
+            jItem.put("has_shielded_cable_one", shielded_cable_one);
+            jItem.put("has_shielded_cable_two", shielded_cable_two);
+            jItem.put("has_separate_line_one", separate_line_one);
+            jItem.put("has_separate_line_two", separate_line_two);
+            jItem.put("has_sbus_contact", sbus_contact);
+            jItem.put("has_db_contact", db_contact);
+            jItem.put("has_distribution_contact", distribution_contact);
+            jItem.put("has_power_contact", power_contact);
+            jItem.put("has_plague",plague);
 
             jItem.put("suggestion", suggestion);
 
