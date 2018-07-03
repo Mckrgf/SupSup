@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.ator.supmaintenance.R;
 import com.ator.supmaintenance.act.tables.CabinetActivity;
 import com.ator.supmaintenance.act.tables.CabinetCorrosionActivity;
+import com.ator.supmaintenance.act.tables.ControlCabinetActivity;
 import com.ator.supmaintenance.act.tables.ControllerCheckActivity;
 import com.ator.supmaintenance.act.tables.GroundCheckActivity;
 import com.ator.supmaintenance.act.tables.OpStationCheckActivity;
@@ -31,6 +32,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.opstation_check_button).setOnClickListener(this);
         findViewById(R.id.system_info_button).setOnClickListener(this);
         findViewById(R.id.cabinet_corrosion_detection_button).setOnClickListener(this);
+        findViewById(R.id.control_cabine_button).setOnClickListener(this);
 
 
         initTop();
@@ -118,6 +120,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.cabinet_corrosion_detection_button:
                 RtEnv.startActivity(CabinetCorrosionActivity.class);
+                break;
+            case R.id.control_cabine_button:
+                RtEnv.startActivity(ControlCabinetActivity.class);
                 break;
 
         }

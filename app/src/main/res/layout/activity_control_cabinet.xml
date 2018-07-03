@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/result_pop_scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/wechatbackcolor"
+    android:fadingEdge="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+
+    <include layout="@layout/table_title" />
+
+    <include layout="@layout/table_name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="控制柜编号:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/cabinet_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入控制柜编号"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="布线整齐:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/neatly_cabled"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/nc_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="是"
+                                android:textColor="@color/radiobutton_green_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/nc_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="否"
+                                android:textColor="@color/radiobutton_red_select"
+                                android:textSize="30px" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="信号线已标识:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/line_identified"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/li_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/li_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="软线使用线鼻:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/use_line_nose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/ul_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/ul_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="屏蔽层接地:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/layer_grounding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/lg_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/lg_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="I、II类信号采用屏蔽电缆:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/shielded_cable_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/sca_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/sca_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="III、IV类信号采用屏蔽电缆:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/shielded_cable_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/sct_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/sct_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="信号电缆与动力电缆分开走线:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/separate_line_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/sla_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/sla_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="通讯电缆与动力电缆分开走线:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/separate_line_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/slt_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/slt_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="SBUS线缆接触良好:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/sbus_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/sc_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/sc_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="DB（端子板）线缆接触良好:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/db_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/dc_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/dc_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="配电模块接触良好:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/distribution_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/dca_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/dca_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="供电线缆接触良好:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/power_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/pc_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/pc_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:text="柜内是否存在鼠害:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <include layout="@layout/fill_view" />
+
+                    <RadioGroup
+                        android:id="@+id/plague"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/p_ok"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="是"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/p_false"
+                            android:layout_width="170px"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="否"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="问题及建议:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+
+                    <EditText
+                        android:id="@+id/suggestion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:hint="备注"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:maxLines="5"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="top|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="附件:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <ImageView
+                        android:id="@+id/iv_add1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="left|top" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="132px" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/bottom_tab" />
+    </RelativeLayout>
+
+
+</LinearLayout>

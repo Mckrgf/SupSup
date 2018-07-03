@@ -3,6 +3,8 @@ package com.ator.supmaintenance.act;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -213,5 +215,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         //        pvOptions.setPicker(options1Items, options2Items);//二级选择器
         pvOptions.setPicker(options1Items, options2Items, options3Items);//三级选择器
 
+    }
+
+    private static final String TAG = "LoginActivity";
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.i(TAG,keyCode+"=================");
+        return super.onKeyDown(keyCode, event);
     }
 }

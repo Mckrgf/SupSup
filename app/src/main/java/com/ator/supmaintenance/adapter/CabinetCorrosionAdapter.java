@@ -65,11 +65,11 @@ public class CabinetCorrosionAdapter {
 
             jobj.put("cabinet_name", cabinet_name);
             jobj.put("room_id", room_id);
-            jobj.put("airtight", airtight);
-            jobj.put("entry_hole", entry_hole);
-            jobj.put("grounding_bare", grounding_bare);
-            jobj.put("scene_bare", scene_bare);
-            jobj.put("iron_screw", iron_screw);
+            jobj.put("has_airtight", airtight);
+            jobj.put("has_entry_hole", entry_hole);
+            jobj.put("has_grounding_bare", grounding_bare);
+            jobj.put("has_scene_bare", scene_bare);
+            jobj.put("has_iron_screw", iron_screw);
             jobj.put("suggestion", suggestion);
             jobj.put("append", append);
             jobj.put("plandate", plandate);
@@ -86,15 +86,15 @@ public class CabinetCorrosionAdapter {
 
             jItem.put("cabinet_name", cabinet_name);
             jItem.put("room_id", room_id);
-            jItem.put("airtight", airtight);
-            jItem.put("entry_hole", entry_hole);
-            jItem.put("grounding_bare", grounding_bare);
-            jItem.put("scene_bare", scene_bare);
-            jItem.put("iron_screw", iron_screw);
+            jItem.put("has_airtight", airtight);
+            jItem.put("has_entry_hole", entry_hole);
+            jItem.put("has_grounding_bare", grounding_bare);
+            jItem.put("has_scene_bare", scene_bare);
+            jItem.put("has_iron_screw", iron_screw);
             jItem.put("suggestion", suggestion);
 
             jAry.put(jItem);
-            jNetObj.put("cabinetSupplyList", jAry);
+            jNetObj.put("cabinetCorrosionDetectionList", jAry);
             jNetObj.put("plandate", plandate);
             jNetObj.put("filename", room_id + ".xlsx");
 
