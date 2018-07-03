@@ -140,6 +140,16 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
                     tools:ignore="HardcodedText"/>
+                <Button
+                    android:text="控制室"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/control_room_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
 
 
             </LinearLayout>

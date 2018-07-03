@@ -10,6 +10,7 @@ import com.ator.supmaintenance.act.tables.CabinetActivity;
 import com.ator.supmaintenance.act.tables.CabinetCorrosionActivity;
 import com.ator.supmaintenance.act.tables.ControlCabinetActivity;
 import com.ator.supmaintenance.act.tables.ControlCabinetPowerActivity;
+import com.ator.supmaintenance.act.tables.ControlRoomActivity;
 import com.ator.supmaintenance.act.tables.ControllerCheckActivity;
 import com.ator.supmaintenance.act.tables.GroundCheckActivity;
 import com.ator.supmaintenance.act.tables.OpStationCheckActivity;
@@ -35,6 +36,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.cabinet_corrosion_detection_button).setOnClickListener(this);
         findViewById(R.id.control_cabine_button).setOnClickListener(this);
         findViewById(R.id.control_cabine_power_button).setOnClickListener(this);
+        findViewById(R.id.control_room_button).setOnClickListener(this);
 
 
         initTop();
@@ -128,6 +130,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.control_cabine_power_button:
                 RtEnv.startActivity(ControlCabinetPowerActivity.class);
+                break;
+            case R.id.control_room_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
                 break;
 
         }

@@ -200,6 +200,10 @@
         <activity
             android:name=".act.tables.ControlCabinetPowerActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:name=".act.tables.ControlRoomActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
