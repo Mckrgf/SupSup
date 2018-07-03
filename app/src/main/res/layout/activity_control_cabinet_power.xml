@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/result_pop_scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/wechatbackcolor"
+    android:fadingEdge="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+
+    <include layout="@layout/table_title" />
+
+    <include layout="@layout/table_name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="控制柜编号:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/cabinet_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="是否使用电源滤波器:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/has_wave_filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/wf_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="是"
+                                android:textColor="@color/radiobutton_green_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/wf_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="否"
+                                android:textColor="@color/radiobutton_red_select"
+                                android:textSize="30px" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电源线径≥2.5mm2:"
+                            android:textColor="@color/black"
+                            android:textSize="30px" />
+
+                        <include layout="@layout/fill_view" />
+
+                        <RadioGroup
+                            android:id="@+id/has_more_line"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/ml_ok"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_marginRight="10px"
+                                android:background="@drawable/radiobutton_green_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="是"
+                                android:textColor="@color/radiobutton_green_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/ml_false"
+                                android:layout_width="170px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="否"
+                                android:textColor="@color/radiobutton_red_select"
+                                android:textSize="30px" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="系统电源A输入电压:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/a_input_voltage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="系统电源A谐波:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/a_harmonic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="系统电源A频率:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/a_frequency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="系统电源B输入电压:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/b_input_voltage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="系统电源B谐波:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/b_harmonic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="系统电源B频率:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/b_frequency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第1机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/one_voltage_value_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第1机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/one_voltage_value_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第2机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/two_voltage_value_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第2机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/two_voltage_value_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第3机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/three_voltage_value_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第3机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/three_voltage_value_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第4机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/four_voltage_value_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第4机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/four_voltage_value_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第5机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/five_voltage_value_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第5机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/five_voltage_value_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第6机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/six_voltage_value_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第6机笼24V电压值:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/six_voltage_value_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="问题及建议:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+
+                    <EditText
+                        android:id="@+id/suggestion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:hint="备注"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:maxLines="5"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="top|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="附件:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <ImageView
+                        android:id="@+id/iv_add1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="left|top" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="132px" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/bottom_tab" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -126,7 +126,7 @@ public class ControlCabinetActivity extends BaseActivity implements View.OnClick
             if (result != null) {
                 JSONObject obj = new JSONObject(result);
 
-                ((EditText) findViewById(R.id.cabinet_name)).setText(obj.getString("cabinet_id"));
+                ((EditText) findViewById(R.id.cabinet_id)).setText(obj.getString("control_cabinet_num"));
 
                 SetRGtext(R.id.neatly_cabled, obj.getString("neatly_cabled"));
                 SetRGtext(R.id.line_identified, obj.getString("line_identified"));
@@ -232,9 +232,9 @@ public class ControlCabinetActivity extends BaseActivity implements View.OnClick
         adapter.MakeJasonObj();
         String strOut = adapter.GetJasonString();
         //
-        FileUtil.saveFile(getApplicationContext(), strOut, "TAG_CAB", adapter.room_id + ".f");
+        FileUtil.saveFile(getApplicationContext(), strOut, TAG_CAB, adapter.room_id + ".f");
         if (mBmp != null) {
-            FileUtil.saveImgFile(getApplicationContext(), mBmp, "TAG_CAB", adapter.append);
+            FileUtil.saveImgFile(getApplicationContext(), mBmp, TAG_CAB, adapter.append);
         }
 
         boolean bOK = false;

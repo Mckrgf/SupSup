@@ -127,11 +127,11 @@ public class CabinetCorrosionActivity extends BaseActivity implements View.OnCli
 
                 ((EditText)findViewById(R.id.cabinet_name)).setText(obj.getString("cabinet_name"));
 
-                SetRGtext(R.id.airtight,obj.getString("airtight"));
-                SetRGtext(R.id.entry_hole,obj.getString("entry_hole"));
-                SetRGtext(R.id.grounding_bare,obj.getString("grounding_bare"));
-                SetRGtext(R.id.scene_bare,obj.getString("scene_bare"));
-                SetRGtext(R.id.iron_screw,obj.getString("iron_screw"));
+                SetRGtext(R.id.airtight,obj.getString("has_airtight"));
+                SetRGtext(R.id.entry_hole,obj.getString("has_entry_hole"));
+                SetRGtext(R.id.grounding_bare,obj.getString("has_grounding_bare"));
+                SetRGtext(R.id.scene_bare,obj.getString("has_scene_bare"));
+                SetRGtext(R.id.iron_screw,obj.getString("has_iron_screw"));
 
                 ((EditText)findViewById(R.id.suggestion)).setText(obj.getString("suggestion"));
 

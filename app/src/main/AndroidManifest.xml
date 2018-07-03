@@ -197,6 +197,9 @@
         <activity
             android:name=".act.tables.ControlCabinetActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".act.tables.ControlCabinetPowerActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
