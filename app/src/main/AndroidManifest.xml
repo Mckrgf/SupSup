@@ -188,9 +188,7 @@
         <activity
             android:name=".act.QueryInspectionActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".act.MaintenMainActivity"></activity>
-
-
+        <activity android:name=".act.MaintenMainActivity" />
         <activity
             android:name=".act.tables.CabinetCorrosionActivity"
             android:screenOrientation="portrait" />
@@ -206,6 +204,7 @@
         <activity
             android:name=".act.tables.ControlRoomPowerMagnetismActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".act.tables.NetSettingActivity"></activity>
     </application>
 
 </manifest>

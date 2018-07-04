@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.ator.supmaintenance.R;
 import com.ator.supmaintenance.UI.AppUpdateDialog;
+import com.ator.supmaintenance.act.tables.NetSettingActivity;
 import com.ator.supmaintenance.item.Constant;
 import com.ator.supmaintenance.item.MyNetHelper;
 import com.ator.supmaintenance.item.RtEnv;
@@ -34,6 +35,7 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         findViewById(R.id.tv_software).setOnClickListener(this);
         findViewById(R.id.tv_userlogon).setOnClickListener(this);
         findViewById(R.id.tv_card).setOnClickListener(this);
+        findViewById(R.id.tv_net).setOnClickListener(this);
 
     }
 
@@ -113,6 +115,9 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                 break;
             case R.id.tv_card:
                 RtEnv.startActivity(NFCCardActivity.class);
+                break;
+            case R.id.tv_net:
+                RtEnv.startActivity(NetSettingActivity.class);
                 break;
         }
 
