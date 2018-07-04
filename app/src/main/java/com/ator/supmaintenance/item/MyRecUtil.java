@@ -5,6 +5,11 @@ import android.content.res.Resources;
 
 import com.ator.supmaintenance.R;
 import com.ator.supmaintenance.adapter.CabinetAdapter;
+import com.ator.supmaintenance.adapter.CabinetCorrosionAdapter;
+import com.ator.supmaintenance.adapter.ControlCabinetAdapter;
+import com.ator.supmaintenance.adapter.ControlCabinetPowerAdapter;
+import com.ator.supmaintenance.adapter.ControlRoomAdapter;
+import com.ator.supmaintenance.adapter.ControlRoomPowerMagnetismAdapter;
 import com.ator.supmaintenance.adapter.ControllerCheckAdapter;
 import com.ator.supmaintenance.adapter.GroundCheckAdapter;
 import com.ator.supmaintenance.adapter.OpStationCheckAdapter;
@@ -85,6 +90,56 @@ public class MyRecUtil {
         if (type.equals("SYSINFO")){
             return  "控制规模信息";
         }
+        if (type.equals("CABINETCORROSION")) {
+            return "机柜腐蚀检测";
+        }
+        if (type.equals("CONTROLCABINET")) {
+            return "控制柜";
+        }
+        if (type.equals("CONTROLCABINETPOWER")) {
+            return "控制柜供电";
+        }
+        if (type.equals("CONTROLROOM")) {
+            return "控制室";
+        }
+        if (type.equals("CONTROLROOMPOWERMAGNETISM")) {
+            return "控制室电磁场强度检查记录单";
+        }
+
+        if (type.equals("MASTERCARDCHECK")) {
+            return "主控卡通讯检查";
+        }
+        if (type.equals("OPERATINGSTATION")) {
+            return "操作站";
+        }
+
+        if (type.equals("OPERATINGSTATIONCHECK")) {
+            return "操作站通讯检查";
+        }
+        if (type.equals("OPERATINGSTATIONCORROSIONDETECTION")) {
+            return "操作站腐蚀检测";
+        }
+        if (type.equals("OPERATINGSTATIONPOWER")) {
+            return "操作站供电";
+        }
+        if (type.equals("POWERCHECK")) {
+            return "电源冗余检查";
+        }
+        if (type.equals("POWERSYSTEM")) {
+            return "系统供电";
+        }
+        if (type.equals("ROOMCORROSIONDETECTION")) {
+            return "控制室腐蚀检测";
+        }
+        if (type.equals("SBUSCHECK")) {
+            return "SBUS网络冗余检查";
+        }
+        if (type.equals("SCNETCHECK")) {
+            return "SCNET控制网冗余检查";
+        }
+        if (type.equals("SYSTEMPOWERCHECK")) {
+            return "系统供电冗余检查";
+        }
 
         return "";
     }
@@ -112,6 +167,25 @@ public class MyRecUtil {
         if (type.equals("SYSINFO")){
             return SysInfoAdapter.strURL+"/"+filetime;
         }
+        if (type.equals("CABINETCORROSION")) {
+            return CabinetCorrosionAdapter.strURL + "/" + filetime;
+        }
+        if (type.equals("CONTROLCABINET")) {
+            return ControlCabinetAdapter.strURL + "/" + filetime;
+        }
+        if (type.equals("CONTROLCABINETPOWER")) {
+            return ControlCabinetPowerAdapter.strURL + "/" + filetime;
+        }
+        if (type.equals("CONTROLROOM")) {
+            return ControlRoomAdapter.strURL + "/" + filetime;
+        }
+        if (type.equals("CONTROLROOMPOWERMAGNETISM")) {
+            return ControlRoomPowerMagnetismAdapter.strURL + "/" + filetime;
+        }
+
+
+
+
 
         return "";
 
@@ -140,6 +214,21 @@ public class MyRecUtil {
         }
         if (type.equals("SYSINFO")){
             return SysInfoAdapter.strURL+"/reports";
+        }
+        if (type.equals("CABINETCORROSION")) {
+            return CabinetCorrosionAdapter.strURL + "/reports";
+        }
+        if (type.equals("CONTROLCABINET")) {
+            return ControlCabinetAdapter.strURL + "/reports";
+        }
+        if (type.equals("CONTROLCABINETPOWER")) {
+            return ControlCabinetPowerAdapter.strURL + "/reports";
+        }
+        if (type.equals("CONTROLROOM")) {
+            return ControlRoomAdapter.strURL + "/reports";
+        }
+        if (type.equals("CONTROLROOMPOWERMAGNETISM")) {
+            return ControlRoomPowerMagnetismAdapter.strURL + "/reports";
         }
 
         return "";
