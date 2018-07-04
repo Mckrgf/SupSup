@@ -11,6 +11,7 @@ import com.ator.supmaintenance.act.tables.CabinetCorrosionActivity;
 import com.ator.supmaintenance.act.tables.ControlCabinetActivity;
 import com.ator.supmaintenance.act.tables.ControlCabinetPowerActivity;
 import com.ator.supmaintenance.act.tables.ControlRoomActivity;
+import com.ator.supmaintenance.act.tables.ControlRoomPowerMagnetismActivity;
 import com.ator.supmaintenance.act.tables.ControllerCheckActivity;
 import com.ator.supmaintenance.act.tables.GroundCheckActivity;
 import com.ator.supmaintenance.act.tables.OpStationCheckActivity;
@@ -37,6 +38,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.control_cabine_button).setOnClickListener(this);
         findViewById(R.id.control_cabine_power_button).setOnClickListener(this);
         findViewById(R.id.control_room_button).setOnClickListener(this);
+        findViewById(R.id.control_room_power_magnetism_button).setOnClickListener(this);
+        findViewById(R.id.master_card_check_button).setOnClickListener(this);
+        findViewById(R.id.operating_station_button).setOnClickListener(this);
+        findViewById(R.id.operating_station_check_button).setOnClickListener(this);
+        findViewById(R.id.operating_station_corrosion_detection_button).setOnClickListener(this);
+        findViewById(R.id.operating_station_power_button).setOnClickListener(this);
+        findViewById(R.id.power_check_button).setOnClickListener(this);
+        findViewById(R.id.power_system_button).setOnClickListener(this);
+        findViewById(R.id.room_corrosion_detection_button).setOnClickListener(this);
+        findViewById(R.id.sbus_check_button).setOnClickListener(this);
+        findViewById(R.id.scnet_check_button).setOnClickListener(this);
+        findViewById(R.id.system_power_check_button).setOnClickListener(this);
 
 
         initTop();
@@ -132,6 +145,42 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 RtEnv.startActivity(ControlCabinetPowerActivity.class);
                 break;
             case R.id.control_room_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.control_room_power_magnetism_button:
+                RtEnv.startActivity(ControlRoomPowerMagnetismActivity.class);
+                break;
+            case R.id.master_card_check_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.operating_station_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.operating_station_check_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.operating_station_corrosion_detection_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.operating_station_power_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.power_check_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.power_system_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.room_corrosion_detection_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.sbus_check_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.scnet_check_button:
+                RtEnv.startActivity(ControlRoomActivity.class);
+                break;
+            case R.id.system_power_check_button:
                 RtEnv.startActivity(ControlRoomActivity.class);
                 break;
 

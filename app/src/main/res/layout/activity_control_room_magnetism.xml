@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/result_pop_scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/wechatbackcolor"
+    android:fadingEdge="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+
+    <include layout="@layout/table_title" />
+
+    <include layout="@layout/table_name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="控制室名称:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/control_room_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="检测地点:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="检测值F(Gs_max):"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/f_gs_max"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="检测值R(Gs_max):"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <EditText
+                        android:id="@+id/r_gs_max"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入"
+                        android:inputType="text"
+                        android:minWidth="300px"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <include layout="@layout/divider_gray_hor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="问题及建议:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+
+                    <EditText
+                        android:id="@+id/suggestion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:hint="备注"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:maxLines="5"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="top|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="附件:"
+                        android:textColor="@color/black"
+                        android:textSize="30px" />
+
+                    <ImageView
+                        android:id="@+id/iv_add1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="left|top" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="132px" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/bottom_tab" />
+    </RelativeLayout>
+
+
+</LinearLayout>

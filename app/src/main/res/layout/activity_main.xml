@@ -152,6 +152,139 @@
                     tools:ignore="HardcodedText"/>
 
 
+                <Button
+                    android:text="控制室电磁场强度检查记录单"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/control_room_power_magnetism_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="主控卡通讯检查"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/master_card_check_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="操作站"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/operating_station_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="操作站通讯检查"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/operating_station_check_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="操作站腐蚀检测"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/operating_station_corrosion_detection_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="操作站供电"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/operating_station_power_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="电源冗余检查"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/power_check_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="系统供电"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/power_system_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="控制室腐蚀检测"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/room_corrosion_detection_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="SBUS网络冗余检查"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sbus_check_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="SCNET控制网冗余检查"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/scnet_check_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+                <Button
+                    android:text="系统供电冗余检查"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/system_power_check_button"
+                    android:background="@drawable/preference_single_item"
+                    android:drawableRight="@drawable/submenu"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="HardcodedText"/>
+
+
             </LinearLayout>
 
 
