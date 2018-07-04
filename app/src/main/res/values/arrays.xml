@@ -94,7 +94,6 @@
         <item>鼠患</item>
 
 
-
         <item>controller_site</item>
         <item>控制器地址</item>
         <item>controller_type</item>
@@ -131,7 +130,6 @@
         <item>AI超量程</item>
         <item>di_joggle</item>
         <item>DI抖动</item>
-
 
 
         <item>operator_site</item>
@@ -229,8 +227,289 @@
         <item>tua711_dor16</item>
         <item>TUA711_DOR16</item>
 
-    </string-array>
 
+        <item>cabinet_name</item>
+        <item>机柜名称</item>
+        <item>has_airtight</item>
+        <item>密闭机柜</item>
+        <item>has_entry_hole</item>
+        <item>进线孔进行了封堵</item>
+        <item>has_grounding_bare</item>
+        <item>接地铜条裸露部分有可见腐蚀痕迹</item>
+        <item>has_scene_bare</item>
+        <item>现场铜制进线裸露部分可见腐蚀痕迹</item>
+        <item>has_iron_screw</item>
+        <item>机柜用于紧固的铁质螺丝钉有可见腐蚀</item>
+
+        <!--控制柜-->
+        <item>control_cabinet_num</item>
+        <item>控制柜编号</item>
+        <item>has_neatly_cabled</item>
+        <item>布线整齐</item>
+        <item>has_line_identified</item>
+        <item>信号线已标识</item>
+        <item>has_use_line_nose</item>
+        <item>软线使用线鼻</item>
+        <item>has_layer_grounding</item>
+        <item>屏蔽层接地</item>
+        <item>has_shielded_cable_one</item>
+        <item>I、II类信号采用屏蔽电缆</item>
+        <item>has_shielded_cable_two</item>
+        <item>III、IV类信号采用屏蔽电缆</item>
+        <item>has_separate_line_one</item>
+        <item>信号电缆与动力电缆分开走线</item>
+        <item>has_separate_line_two</item>
+        <item>通讯电缆与动力电缆分开走线</item>
+        <item>has_sbus_contact</item>
+        <item>SBUS线缆接触良好</item>
+        <item>has_db_contact</item>
+        <item>DB（端子板）线缆接触良好</item>
+        <item>has_distribution_contact</item>
+        <item>配电模块接触良好</item>
+        <item>has_power_contact</item>
+        <item>供电线缆接触良好</item>
+        <item>has_plague</item>
+        <item>柜内是否存在鼠害</item>
+
+
+        <!--控制柜供电-->
+        <item>has_wave_filter</item>
+        <item>是否使用电源滤波器</item>
+        <item>has_more_line</item>
+        <item>电源线径≥2.5mm2</item>
+        <item>a_input_voltage</item>
+        <item>系统电源A输入电压</item>
+        <item>a_harmonic</item>
+        <item>系统电源A谐波</item>
+        <item>a_frequency</item>
+        <item>系统电源A频率</item>
+        <item>b_input_voltage</item>
+        <item>系统电源B输入电压</item>
+        <item>b_harmonic</item>
+        <item>系统电源B谐波</item>
+        <item>b_frequency</item>
+        <item>系统电源B频率</item>
+        <item>one_voltage_value_one</item>
+        <item>第1机笼24V电压值</item>
+        <item>one_voltage_value_two</item>
+        <item>第1机笼24V电压值</item>
+        <item>two_voltage_value_one</item>
+        <item>第2机笼24V电压值</item>
+        <item>two_voltage_value_two</item>
+        <item>第2机笼24V电压值</item>
+        <item>three_voltage_value_one</item>
+        <item>第3机笼24V电压值</item>
+        <item>three_voltage_value_two</item>
+        <item>第3机笼24V电压值</item>
+        <item>four_voltage_value_one</item>
+        <item>第4机笼24V电压值</item>
+        <item>four_voltage_value_two</item>
+        <item>第4机笼24V电压值</item>
+        <item>five_voltage_value_one</item>
+        <item>第5机笼24V电压值</item>
+        <item>five_voltage_value_two</item>
+        <item>第5机笼24V电压值</item>
+        <item>six_voltage_value_one</item>
+        <item>第6机笼24V电压值</item>
+        <item>six_voltage_value_two</item>
+        <item>第6机笼24V电压值</item>
+
+
+        <!--control_room控制室-->
+        <item>control_room_name</item>
+        <item>控制室名称</item>
+        <item>grounding_form</item>
+        <item>接地形式</item>
+        <item>earth_power</item>
+        <item>系统地与电气接地点之间的距离＞10m</item>
+        <item>earth_thunder</item>
+        <item>系统地与独立避雷接地点之间的距离＞20m</item>
+        <item>earth</item>
+        <item>接地线＜30m</item>
+        <item>total_earth</item>
+        <item>接地总干线线径≥16mm2</item>
+        <item>earth_resistance</item>
+        <item>接地电阻＜4Ω</item>
+        <item>description</item>
+        <item>接地电阻测量方法说明</item>
+        <item>leakage_current</item>
+        <item>接地总干线漏电流(mA)</item>
+
+
+        <!--control_room_power_magnetism控制室电磁场强度检查记录单-->
+        <item>address</item>
+        <item>地址</item>
+        <item>f_gs_max</item>
+        <item>检测值F(Gs_max)</item>
+        <item>r_gs_max</item>
+        <item>检测值R(Gs_max)</item>
+
+
+        <!--master_card_check主控卡通讯检查-->
+        <item>a_communication</item>
+        <item>A端口通讯正常（包括外接网线）</item>
+        <item>a_communication</item>
+        <item>B端口通讯正常（包括外接网线）</item>
+        <item>has_identified</item>
+        <item>网络线已标识</item>
+        <item>has_subs_zero</item>
+        <item>SUBS总线0通讯正常</item>
+        <item>has_subs_one</item>
+        <item>SUBS总线1通讯正常</item>
+
+
+        <!--operating_station  操作站-->
+        <item>compute_name</item>
+        <item>计算机名</item>
+        <item>has_driver</item>
+        <item>驱动程序是否完全安装</item>
+        <item>has_virtual_memory</item>
+        <item>虚拟内存是否设置</item>
+        <item>net_close</item>
+        <item>网卡流控制是否关闭</item>
+        <item>binuclear_close</item>
+        <item>计算机双核有无关闭</item>
+        <item>attribute_setting</item>
+        <item>显示属性是否按规范设置</item>
+        <item>power_manage</item>
+        <item>电源管理是否规范</item>
+        <item>fault_diagnosis_normal</item>
+        <item>故障诊断是否正常</item>
+        <item>status</item>
+        <item>上下位机组态是否一致</item>
+        <item>time_setting</item>
+        <item>时钟同步已设置</item>
+        <item>soft_dog</item>
+        <item>软件狗是否正常</item>
+        <item>capacity_normal</item>
+        <item>磁盘空间余量正常</item>
+        <item>soft_version</item>
+        <item>组态软件版本</item>
+        <item>patch_version</item>
+        <item>组态软件补丁版</item>
+        <item>d_dcsdata</item>
+        <item>组态文件是否在D盘DCSDATA下</item>
+        <item>os_version</item>
+        <item>操作系统版本</item>
+        <item>os_patch</item>
+        <item>操作系统补丁</item>
+        <item>keyborad_normal</item>
+        <item>操作员键盘操作正常</item>
+        <item>mouse</item>
+        <item>鼠标操作正常</item>
+        <item>cd_drive</item>
+        <item>光驱正常</item>
+
+
+        <!--operating_station_check操作站通讯检查-->
+        <item>operating_station_num</item>
+        <item>操作站编号</item>
+        <item>has_line_identified</item>
+        <item>网络线已标识</item>
+        <item>c_communication</item>
+        <item>C端口通讯正常（包括外接网线）</item>
+        <item>net_close</item>
+        <item>网卡流关闭</item>
+
+
+        <!--operating_station_corrosion_detection操作站腐蚀检测-->
+        <item>operating_station_name</item>
+        <item>操作站名称</item>
+        <item>has_airtight</item>
+        <item>密闭操作台</item>
+        <item>has_corrosive_odor</item>
+        <item>操作室为明显腐蚀气体环境</item>
+        <item>has_entry_hole</item>
+        <item>进线孔进行了封堵</item>
+        <item>has_grounding_bare</item>
+        <item>接地铜条裸露部分有可见腐蚀痕迹</item>
+        <item>has_iron_screw</item>
+        <item>用于紧固的铁质螺丝钉有可见腐蚀</item>
+
+
+        <!--operating_station_power操作站供电-->
+        <item>has_two_way</item>
+        <item>双路供电</item>
+        <item>has_switcher</item>
+        <item>是否按照交流切换器</item>
+        <item>ac_value</item>
+        <item>AC220V供电电压</item>
+        <item>harmonic_value</item>
+        <item>电源谐波</item>
+        <item>has_more_line</item>
+        <item>电源线径≥2.5mm2</item>
+
+
+        <!--power_check  电源冗余检查-->
+        <item>power_num</item>
+        <item>电源序号</item>
+        <item>has_normal</item>
+        <item>冗余功能正常</item>
+
+
+        <!--power_system系统供电-->
+        <item>name</item>
+        <item>控制室名称</item>
+        <item>mode</item>
+        <item>系统供电模式</item>
+        <item>has_dcs</item>
+        <item>是否设置独立DCS供电配电机柜/箱</item>
+        <item>has_two_busbar</item>
+        <item>两路外供电来自两段独立母线(变压器)</item>
+        <item>has_setting_open</item>
+        <item>主要用电设备均设置空开</item>
+        <item>ups_state</item>
+        <item>UPS工作状态</item>
+
+        <!--room_corrosion_detection控制室腐蚀检测-->
+        <item>room_name</item>
+        <item>控制室名称</item>
+        <item>has_sharp_aroma</item>
+        <item>控制内有可感知刺鼻腐蚀性气体</item>
+        <item>has_corrosive_odor</item>
+        <item>控制室所处工段存在腐蚀性气体</item>
+        <item>has_internal_device</item>
+        <item>控制室位于装置内部或非常靠近生产装置</item>
+        <item>has_two_gate</item>
+        <item>控制室设置两道门用于密封</item>
+        <item>has_window</item>
+        <item>控制室设置了窗户用于通风</item>
+        <item>has_entry_hole</item>
+        <item>控制室所有进线孔均进行了封堵</item>
+        <item>has_air_conditioner</item>
+        <item>控制室设置空调且工作正常</item>
+
+
+        <!--sbus_check SBUS网络冗余检查-->
+        <item>sbus_one</item>
+        <item>第一机笼SBUS网络冗余正常</item>
+        <item>sbus_two</item>
+        <item>第二机笼SBUS网络冗余正常</item>
+        <item>sbus_three</item>
+        <item>第三机笼SBUS网络冗余正常</item>
+        <item>sbus_four</item>
+        <item>第四机笼SBUS网络冗余正常</item>
+        <item>sbus_five</item>
+        <item>第五机笼SBUS网络冗余正常</item>
+        <item>sbus_six</item>
+        <item>第六机笼SBUS网络冗余正常</item>
+
+        <!--scnet_check SCNET控制网冗余检查-->
+        <item>address_one</item>
+        <item>网络节点地址</item>
+        <item>has_normal_one</item>
+        <item>冗余功能正常</item>
+        <item>address_two</item>
+        <item>网络节点地址</item>
+        <item>has_normal_two</item>
+        <item>冗余功能正常</item>
+
+
+        <!--system_power_check系统供电冗余检查-->
+        <item>control_cabinet</item>
+        <item>控制柜</item>
+
+    </string-array>
 
 
     <string-array name="results">
