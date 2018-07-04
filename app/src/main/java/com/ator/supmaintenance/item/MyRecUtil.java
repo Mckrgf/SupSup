@@ -12,6 +12,7 @@ import com.ator.supmaintenance.adapter.ControlRoomAdapter;
 import com.ator.supmaintenance.adapter.ControlRoomPowerMagnetismAdapter;
 import com.ator.supmaintenance.adapter.ControllerCheckAdapter;
 import com.ator.supmaintenance.adapter.GroundCheckAdapter;
+import com.ator.supmaintenance.adapter.MasterCardCheckAdapter;
 import com.ator.supmaintenance.adapter.OpStationCheckAdapter;
 import com.ator.supmaintenance.adapter.PowerAllAdapter;
 import com.ator.supmaintenance.adapter.SysInfoAdapter;
@@ -182,6 +183,9 @@ public class MyRecUtil {
         if (type.equals("CONTROLROOMPOWERMAGNETISM")) {
             return ControlRoomPowerMagnetismAdapter.strURL + "/" + filetime;
         }
+        if (type.equals("MASTERCARDCHECK")) {
+            return MasterCardCheckAdapter.strURL + "/" + filetime;
+        }
 
 
 
@@ -229,6 +233,9 @@ public class MyRecUtil {
         }
         if (type.equals("CONTROLROOMPOWERMAGNETISM")) {
             return ControlRoomPowerMagnetismAdapter.strURL + "/reports";
+        }
+        if (type.equals("MASTERCARDCHECK")) {
+            return MasterCardCheckAdapter.strURL + "/reports";
         }
 
         return "";

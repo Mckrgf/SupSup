@@ -14,6 +14,7 @@ import com.ator.supmaintenance.act.tables.ControlRoomActivity;
 import com.ator.supmaintenance.act.tables.ControlRoomPowerMagnetismActivity;
 import com.ator.supmaintenance.act.tables.ControllerCheckActivity;
 import com.ator.supmaintenance.act.tables.GroundCheckActivity;
+import com.ator.supmaintenance.act.tables.MasterCardCheckActivity;
 import com.ator.supmaintenance.act.tables.OpStationCheckActivity;
 import com.ator.supmaintenance.act.tables.PowerAllActivity;
 import com.ator.supmaintenance.act.tables.SysInfoActivity;
@@ -151,7 +152,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 RtEnv.startActivity(ControlRoomPowerMagnetismActivity.class);
                 break;
             case R.id.master_card_check_button:
-                RtEnv.startActivity(ControlRoomActivity.class);
+                RtEnv.startActivity(MasterCardCheckActivity.class);
                 break;
             case R.id.operating_station_button:
                 RtEnv.startActivity(ControlRoomActivity.class);
