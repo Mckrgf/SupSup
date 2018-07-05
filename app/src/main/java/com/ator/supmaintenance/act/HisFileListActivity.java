@@ -49,6 +49,7 @@ public class HisFileListActivity extends BaseActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_his_file_list);
 
+
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         mStrSub = bundle.getString("type");
