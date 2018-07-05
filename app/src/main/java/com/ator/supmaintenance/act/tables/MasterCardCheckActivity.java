@@ -129,11 +129,11 @@ public class MasterCardCheckActivity extends BaseActivity implements View.OnClic
 
                 ((EditText) findViewById(R.id.address)).setText(obj.getString("address"));
 
-                SetRGtext(R.id.a_communication , obj.getString("address"        ));
-                SetRGtext(R.id.b_communication , obj.getString("a_communication"));
-                SetRGtext(R.id.has_identified  , obj.getString("b_communication"));
-                SetRGtext(R.id.has_subs_zero   , obj.getString("has_identified" ));
-                SetRGtext(R.id.has_subs_one    , obj.getString("has_subs_zero"  ));
+                SetRGtext(R.id.a_communication , obj.getString("a_communication"        ));
+                SetRGtext(R.id.b_communication , obj.getString("b_communication"));
+                SetRGtext(R.id.has_identified  , obj.getString("has_identified"));
+                SetRGtext(R.id.has_subs_zero   , obj.getString("has_subs_zero" ));
+                SetRGtext(R.id.has_subs_one    , obj.getString("has_subs_one"  ));
 
                 ((EditText) findViewById(R.id.description)).setText(obj.getString("description"));
                 ((EditText) findViewById(R.id.leakage_current)).setText(obj.getString("leakage_current"));

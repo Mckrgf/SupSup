@@ -6,7 +6,6 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,24 +14,24 @@ import android.widget.Toast;
 import com.ator.supmaintenance.R;
 import com.ator.supmaintenance.act.BaseActivity;
 import com.ator.supmaintenance.act.HisFileListActivity;
-import com.ator.supmaintenance.adapter.ControlRoomAdapter;
+import com.ator.supmaintenance.adapter.OperatingStationAdapter;
 import com.ator.supmaintenance.item.FileUtil;
 import com.ator.supmaintenance.item.MyNetHelper;
 import com.ator.supmaintenance.item.RtEnv;
 
 import org.json.JSONObject;
 
-public class ControlRoomActivity extends BaseActivity implements View.OnClickListener {
+public class OperatingStationActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView mivAdd;
 
-    public ControlRoomAdapter adapter = new ControlRoomAdapter();
+    public OperatingStationAdapter adapter = new OperatingStationAdapter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_control_room);
+        setContentView(R.layout.activity_operating_station);
 
         mivAdd = (ImageView) findViewById(R.id.iv_add1);
 
@@ -44,7 +43,7 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
         findViewById(R.id.im_erase).setOnClickListener(this);
 
         TextView tv_cpName = findViewById(R.id.tv_cpName);
-        tv_cpName.setText("控制室");
+        tv_cpName.setText("操作站");
 
         loadTmpfile();
 
@@ -52,7 +51,7 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     protected int initContentView() {
-        return R.layout.activity_control_room;
+        return R.layout.activity_operating_station;
     }
 
     @Override
@@ -101,7 +100,7 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
     }
 
 
-    private String mTmpSub = "TEMP-CONTROLROOM";
+    private String mTmpSub = "TEMP-OPERATINGSTATION";
 
     private void saveTmpfile() {
 
@@ -128,17 +127,28 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
             if (result != null) {
                 JSONObject obj = new JSONObject(result);
 
-                ((EditText) findViewById(R.id.control_room_name)).setText(obj.getString("control_room_name"));
-                ((EditText) findViewById(R.id.grounding_form)).setText(obj.getString("grounding_form"));
+                ((EditText) findViewById(R.id.control_room_name )).setText(obj.getString("control_room_name"  ));
+                ((EditText) findViewById(R.id.compute_name )).setText(obj.getString("compute_name"  ));
+                ((EditText) findViewById(R.id.soft_version )).setText(obj.getString("soft_version"  ));
+                ((EditText) findViewById(R.id.patch_version)).setText(obj.getString("patch_version" ));
+                ((EditText) findViewById(R.id.os_version   )).setText(obj.getString("os_version"    ));
+                ((EditText) findViewById(R.id.os_patch     )).setText(obj.getString("os_patch"      ));
 
-                SetRGtext(R.id.earth_power      , obj.getString("earth_power"     ));
-                SetRGtext(R.id.earth_thunder    , obj.getString("earth_thunder"   ));
-                SetRGtext(R.id.earth            , obj.getString("earth"           ));
-                SetRGtext(R.id.total_earth      , obj.getString("total_earth"     ));
-                SetRGtext(R.id.earth_resistance , obj.getString("earth_resistance"));
-
-                ((EditText) findViewById(R.id.description)).setText(obj.getString("description"));
-                ((EditText) findViewById(R.id.leakage_current)).setText(obj.getString("leakage_current"));
+                SetRGtext(R.id.has_driver             , obj.getString("has_driver"            ));
+                SetRGtext(R.id.has_virtual_memory     , obj.getString("has_virtual_memory"    ));
+                SetRGtext(R.id.net_close              , obj.getString("net_close"             ));
+                SetRGtext(R.id.binuclear_close        , obj.getString("binuclear_close"       ));
+                SetRGtext(R.id.attribute_setting      , obj.getString("attribute_setting"     ));
+                SetRGtext(R.id.power_manage           , obj.getString("power_manage"          ));
+                SetRGtext(R.id.fault_diagnosis_normal , obj.getString("fault_diagnosis_normal"));
+                SetRGtext(R.id.status                 , obj.getString("status"                ));
+                SetRGtext(R.id.time_setting           , obj.getString("time_setting"          ));
+                SetRGtext(R.id.soft_dog               , obj.getString("soft_dog"              ));
+                SetRGtext(R.id.capacity_normal        , obj.getString("capacity_normal"       ));
+                SetRGtext(R.id.d_dcsdata              , obj.getString("d_dcsdata"             ));
+                SetRGtext(R.id.keyborad_normal        , obj.getString("keyborad_normal"       ));
+                SetRGtext(R.id.mouse                  , obj.getString("mouse"                 ));
+                SetRGtext(R.id.cd_drive               , obj.getString("cd_drive"              ));
 
                 ((EditText) findViewById(R.id.suggestion)).setText(obj.getString("suggestion"));
 
@@ -158,16 +168,28 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
 
     private void Clearall() {
 
-        ((EditText) findViewById(R.id.control_room_name)).setText("");
-        ((EditText) findViewById(R.id.grounding_form)).setText("");
-        ((EditText) findViewById(R.id.description)).setText("");
-        ((EditText) findViewById(R.id.leakage_current)).setText("");
+        ((EditText) findViewById(R.id.control_room_name )).setText("");
+        ((EditText) findViewById(R.id.compute_name )).setText("");
+        ((EditText) findViewById(R.id.soft_version )).setText("");
+        ((EditText) findViewById(R.id.patch_version)).setText("");
+        ((EditText) findViewById(R.id.os_version   )).setText("");
+        ((EditText) findViewById(R.id.os_patch     )).setText("");
 
-        SetRGtext(R.id.earth_power      ,         "");
-        SetRGtext(R.id.earth_thunder    ,         "");
-        SetRGtext(R.id.earth            ,         "");
-        SetRGtext(R.id.total_earth      ,         "");
-        SetRGtext(R.id.earth_resistance ,         "");
+        SetRGtext(R.id.has_driver            ,         "");
+        SetRGtext(R.id.has_virtual_memory    ,         "");
+        SetRGtext(R.id.net_close             ,         "");
+        SetRGtext(R.id.binuclear_close       ,         "");
+        SetRGtext(R.id.attribute_setting     ,         "");
+        SetRGtext(R.id.power_manage          ,         "");
+        SetRGtext(R.id.fault_diagnosis_normal,         "");
+        SetRGtext(R.id.status                ,         "");
+        SetRGtext(R.id.time_setting          ,         "");
+        SetRGtext(R.id.soft_dog              ,         "");
+        SetRGtext(R.id.capacity_normal       ,         "");
+        SetRGtext(R.id.d_dcsdata             ,         "");
+        SetRGtext(R.id.keyborad_normal       ,         "");
+        SetRGtext(R.id.mouse                 ,         "");
+        SetRGtext(R.id.cd_drive              ,         "");
 
         ((EditText) findViewById(R.id.suggestion)).setText("");
 
@@ -188,16 +210,28 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
     }
 
     private void setAdapter() {
-        adapter.control_room_name = ((EditText) findViewById(R.id.control_room_name)).getText().toString().trim();
-        adapter.grounding_form = ((EditText) findViewById(R.id.grounding_form)).getText().toString().trim();
-        adapter.description = ((EditText) findViewById(R.id.description)).getText().toString().trim();
-        adapter.leakage_current = ((EditText) findViewById(R.id.leakage_current)).getText().toString().trim();
+        adapter.control_room_name    = ((EditText) findViewById(R.id.control_room_name    )).getText().toString().trim();
+        adapter.compute_name    = ((EditText) findViewById(R.id.compute_name    )).getText().toString().trim();
+        adapter.soft_version    = ((EditText) findViewById(R.id.soft_version    )).getText().toString().trim();
+        adapter.patch_version   = ((EditText) findViewById(R.id.patch_version   )).getText().toString().trim();
+        adapter.os_version      = ((EditText) findViewById(R.id.os_version      )).getText().toString().trim();
+        adapter.os_patch        = ((EditText) findViewById(R.id.os_patch        )).getText().toString().trim();
 
-        adapter.earth_power       = GetRGtext(R.id.earth_power      );
-        adapter.earth_thunder     = GetRGtext(R.id.earth_thunder    );
-        adapter.earth             = GetRGtext(R.id.earth            );
-        adapter.total_earth       = GetRGtext(R.id.total_earth      );
-        adapter.earth_resistance  = GetRGtext(R.id.earth_resistance );
+        adapter.has_driver             = GetRGtext(R.id.has_driver             );
+        adapter.has_virtual_memory     = GetRGtext(R.id.has_virtual_memory     );
+        adapter.net_close              = GetRGtext(R.id.net_close              );
+        adapter.binuclear_close        = GetRGtext(R.id.binuclear_close        );
+        adapter.attribute_setting      = GetRGtext(R.id.attribute_setting      );
+        adapter.power_manage           = GetRGtext(R.id.power_manage           );
+        adapter.fault_diagnosis_normal = GetRGtext(R.id.fault_diagnosis_normal );
+        adapter.status                 = GetRGtext(R.id.status                 );
+        adapter.time_setting           = GetRGtext(R.id.time_setting           );
+        adapter.soft_dog               = GetRGtext(R.id.soft_dog               );
+        adapter.capacity_normal        = GetRGtext(R.id.capacity_normal        );
+        adapter.d_dcsdata              = GetRGtext(R.id.d_dcsdata              );
+        adapter.keyborad_normal        = GetRGtext(R.id.keyborad_normal        );
+        adapter.mouse                  = GetRGtext(R.id.mouse                  );
+        adapter.cd_drive               = GetRGtext(R.id.cd_drive               );
 
         adapter.suggestion = ((EditText) findViewById(R.id.suggestion)).getText().toString().trim();
 
@@ -213,7 +247,7 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
         return adapter.CheckAll();
     }
 
-    private static final String TAG_CAB = "CONTROLROOM";
+    private static final String TAG_CAB = "OPERATINGSTATION";
 
     private boolean SubMit() {
 
@@ -266,7 +300,7 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
             }
             break;
             case R.id.im_erase: {
-                new AlertDialog.Builder(ControlRoomActivity.this).setTitle("系统提示")//设置对话框标题
+                new AlertDialog.Builder(OperatingStationActivity.this).setTitle("系统提示")//设置对话框标题
                         .setMessage("是否清空数据？")//设置显示的内容
                         .setPositiveButton("确定", new DialogInterface.OnClickListener() {//添加确定按钮
                             @Override

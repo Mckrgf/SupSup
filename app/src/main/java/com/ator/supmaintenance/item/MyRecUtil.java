@@ -14,6 +14,7 @@ import com.ator.supmaintenance.adapter.ControllerCheckAdapter;
 import com.ator.supmaintenance.adapter.GroundCheckAdapter;
 import com.ator.supmaintenance.adapter.MasterCardCheckAdapter;
 import com.ator.supmaintenance.adapter.OpStationCheckAdapter;
+import com.ator.supmaintenance.adapter.OperatingStationAdapter;
 import com.ator.supmaintenance.adapter.PowerAllAdapter;
 import com.ator.supmaintenance.adapter.SysInfoAdapter;
 import com.ator.supmaintenance.adapter.SysRunAdapter;
@@ -186,6 +187,9 @@ public class MyRecUtil {
         if (type.equals("MASTERCARDCHECK")) {
             return MasterCardCheckAdapter.strURL + "/" + filetime;
         }
+        if (type.equals("OPERATINGSTATION")) {
+            return OperatingStationAdapter.strURL + "/" + filetime;
+        }
 
 
 
@@ -236,6 +240,9 @@ public class MyRecUtil {
         }
         if (type.equals("MASTERCARDCHECK")) {
             return MasterCardCheckAdapter.strURL + "/reports";
+        }
+        if (type.equals("OPERATINGSTATION")) {
+            return OperatingStationAdapter.strURL + "/reports";
         }
 
         return "";
