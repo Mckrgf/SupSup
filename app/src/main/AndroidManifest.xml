@@ -210,6 +210,9 @@
         <activity
             android:name=".act.tables.OperatingStationActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".act.tables.OperatingStationCorrosionDetectionActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".act.tables.NetSettingActivity"></activity>
     </application>
 
