@@ -21,6 +21,7 @@ import com.ator.supmaintenance.adapter.OperatingStationPowerAdapter;
 import com.ator.supmaintenance.adapter.PowerAllAdapter;
 import com.ator.supmaintenance.adapter.PowerCheckAdapter;
 import com.ator.supmaintenance.adapter.PowerSystemAdapter;
+import com.ator.supmaintenance.adapter.RoomCorrosionDetectionAdapter;
 import com.ator.supmaintenance.adapter.SysInfoAdapter;
 import com.ator.supmaintenance.adapter.SysRunAdapter;
 
@@ -210,6 +211,9 @@ public class MyRecUtil {
         if (type.equals("POWERSYSTEM")) {
             return PowerSystemAdapter.strURL + "/" + filetime;
         }
+        if (type.equals("ROOMCORROSIONDETECTION")) {
+            return RoomCorrosionDetectionAdapter.strURL + "/" + filetime;
+        }
 
 
 
@@ -278,6 +282,9 @@ public class MyRecUtil {
         }
         if (type.equals("POWERSYSTEM")) {
             return PowerSystemAdapter.strURL + "/reports";
+        }
+        if (type.equals("ROOMCORROSIONDETECTION")) {
+            return RoomCorrosionDetectionAdapter.strURL + "/reports";
         }
 
         return "";
