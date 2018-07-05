@@ -228,6 +228,9 @@
         <activity
             android:name=".act.tables.RoomCorrosionDetectionActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".act.tables.SBUSCheckActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".act.tables.NetSettingActivity"></activity>
     </application>
 

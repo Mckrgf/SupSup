@@ -14,24 +14,24 @@ import android.widget.Toast;
 import com.ator.supmaintenance.R;
 import com.ator.supmaintenance.act.BaseActivity;
 import com.ator.supmaintenance.act.HisFileListActivity;
-import com.ator.supmaintenance.adapter.RoomCorrosionDetectionAdapter;
+import com.ator.supmaintenance.adapter.SBUSCheckAdapter;
 import com.ator.supmaintenance.item.FileUtil;
 import com.ator.supmaintenance.item.MyNetHelper;
 import com.ator.supmaintenance.item.RtEnv;
 
 import org.json.JSONObject;
 
-public class RoomCorrosionDetectionActivity extends BaseActivity implements View.OnClickListener {
+public class SBUSCheckActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView mivAdd;
 
-    public RoomCorrosionDetectionAdapter adapter = new RoomCorrosionDetectionAdapter();
+    public SBUSCheckAdapter adapter = new SBUSCheckAdapter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_room_corrosion_detection);
+        setContentView(R.layout.activity_sbus_check);
 
         mivAdd = (ImageView) findViewById(R.id.iv_add1);
 
@@ -43,7 +43,7 @@ public class RoomCorrosionDetectionActivity extends BaseActivity implements View
         findViewById(R.id.im_erase).setOnClickListener(this);
 
         TextView tv_cpName = findViewById(R.id.tv_cpName);
-        tv_cpName.setText("控制室腐蚀检测");
+        tv_cpName.setText("SBUS网络冗余检查");
 
         loadTmpfile();
 
@@ -51,7 +51,7 @@ public class RoomCorrosionDetectionActivity extends BaseActivity implements View
 
     @Override
     protected int initContentView() {
-        return R.layout.activity_room_corrosion_detection;
+        return R.layout.activity_sbus_check;
     }
 
     @Override
@@ -100,7 +100,7 @@ public class RoomCorrosionDetectionActivity extends BaseActivity implements View
     }
 
 
-    private String mTmpSub = "TEMP-ROOMCORROSIONDETECTION";
+    private String mTmpSub = "TEMP-SBUSCHECK";
 
     private void saveTmpfile() {
 
@@ -127,15 +127,14 @@ public class RoomCorrosionDetectionActivity extends BaseActivity implements View
             if (result != null) {
                 JSONObject obj = new JSONObject(result);
 
-                ((EditText) findViewById(R.id.room_name )).setText(obj.getString("room_name"  ));
+                ((EditText) findViewById(R.id.address )).setText(obj.getString("address"  ));
 
-                SetRGtext(R.id.has_sharp_aroma         , obj.getString("has_sharp_aroma"          ));
-                SetRGtext(R.id.has_corrosive_odor      , obj.getString("has_corrosive_odor"       ));
-                SetRGtext(R.id.has_internal_device     , obj.getString("has_internal_device"      ));
-                SetRGtext(R.id.has_two_gate            , obj.getString("has_two_gate"             ));
-                SetRGtext(R.id.has_window              , obj.getString("has_window"               ));
-                SetRGtext(R.id.has_entry_hole          , obj.getString("has_entry_hole"           ));
-                SetRGtext(R.id.has_air_conditioner     , obj.getString("has_air_conditioner"      ));
+                SetRGtext(R.id.sbus_one       , obj.getString("sbus_one"        ));
+                SetRGtext(R.id.sbus_two       , obj.getString("sbus_two"        ));
+                SetRGtext(R.id.sbus_three     , obj.getString("sbus_three"      ));
+                SetRGtext(R.id.sbus_four      , obj.getString("sbus_four"       ));
+                SetRGtext(R.id.sbus_five      , obj.getString("sbus_five"       ));
+                SetRGtext(R.id.sbus_six       , obj.getString("sbus_six"        ));
 
                 ((EditText) findViewById(R.id.suggestion)).setText(obj.getString("suggestion"));
 
@@ -155,15 +154,14 @@ public class RoomCorrosionDetectionActivity extends BaseActivity implements View
 
     private void Clearall() {
 
-        ((EditText) findViewById(R.id.room_name )).setText("");
+        ((EditText) findViewById(R.id.address )).setText("");
 
-        SetRGtext(R.id.has_sharp_aroma         ,         "");
-        SetRGtext(R.id.has_corrosive_odor      ,         "");
-        SetRGtext(R.id.has_entry_hole          ,         "");
-        SetRGtext(R.id.has_internal_device     ,         "");
-        SetRGtext(R.id.has_two_gate            ,         "");
-        SetRGtext(R.id.has_window              ,         "");
-        SetRGtext(R.id.has_air_conditioner     ,         "");
+        SetRGtext(R.id.sbus_one       ,         "");
+        SetRGtext(R.id.sbus_two       ,         "");
+        SetRGtext(R.id.sbus_three     ,         "");
+        SetRGtext(R.id.sbus_four      ,         "");
+        SetRGtext(R.id.sbus_five      ,         "");
+        SetRGtext(R.id.sbus_six       ,         "");
 
         ((EditText) findViewById(R.id.suggestion)).setText("");
 
@@ -184,15 +182,14 @@ public class RoomCorrosionDetectionActivity extends BaseActivity implements View
     }
 
     private void setAdapter() {
-        adapter.room_name    = ((EditText) findViewById(R.id.room_name    )).getText().toString().trim();
+        adapter.address    = ((EditText) findViewById(R.id.address    )).getText().toString().trim();
 
-        adapter.has_sharp_aroma         = GetRGtext(R.id.has_sharp_aroma         );
-        adapter.has_corrosive_odor      = GetRGtext(R.id.has_corrosive_odor      );
-        adapter.has_internal_device     = GetRGtext(R.id.has_internal_device     );
-        adapter.has_two_gate            = GetRGtext(R.id.has_two_gate            );
-        adapter.has_window              = GetRGtext(R.id.has_window              );
-        adapter.has_entry_hole          = GetRGtext(R.id.has_entry_hole          );
-        adapter.has_air_conditioner     = GetRGtext(R.id.has_air_conditioner     );
+        adapter.sbus_one       = GetRGtext(R.id.sbus_one       );
+        adapter.sbus_two       = GetRGtext(R.id.sbus_two       );
+        adapter.sbus_three     = GetRGtext(R.id.sbus_three     );
+        adapter.sbus_four      = GetRGtext(R.id.sbus_four      );
+        adapter.sbus_five      = GetRGtext(R.id.sbus_five      );
+        adapter.sbus_six       = GetRGtext(R.id.sbus_six       );
 
         adapter.suggestion = ((EditText) findViewById(R.id.suggestion)).getText().toString().trim();
 
@@ -208,7 +205,7 @@ public class RoomCorrosionDetectionActivity extends BaseActivity implements View
         return adapter.CheckAll();
     }
 
-    private static final String TAG_CAB = "ROOMCORROSIONDETECTION";
+    private static final String TAG_CAB = "SBUSCHECK";
 
     private boolean SubMit() {
 
@@ -261,7 +258,7 @@ public class RoomCorrosionDetectionActivity extends BaseActivity implements View
             }
             break;
             case R.id.im_erase: {
-                new AlertDialog.Builder(RoomCorrosionDetectionActivity.this).setTitle("系统提示")//设置对话框标题
+                new AlertDialog.Builder(SBUSCheckActivity.this).setTitle("系统提示")//设置对话框标题
                         .setMessage("是否清空数据？")//设置显示的内容
                         .setPositiveButton("确定", new DialogInterface.OnClickListener() {//添加确定按钮
                             @Override

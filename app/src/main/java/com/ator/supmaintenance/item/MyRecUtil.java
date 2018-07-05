@@ -22,6 +22,7 @@ import com.ator.supmaintenance.adapter.PowerAllAdapter;
 import com.ator.supmaintenance.adapter.PowerCheckAdapter;
 import com.ator.supmaintenance.adapter.PowerSystemAdapter;
 import com.ator.supmaintenance.adapter.RoomCorrosionDetectionAdapter;
+import com.ator.supmaintenance.adapter.SBUSCheckAdapter;
 import com.ator.supmaintenance.adapter.SysInfoAdapter;
 import com.ator.supmaintenance.adapter.SysRunAdapter;
 
@@ -214,6 +215,9 @@ public class MyRecUtil {
         if (type.equals("ROOMCORROSIONDETECTION")) {
             return RoomCorrosionDetectionAdapter.strURL + "/" + filetime;
         }
+        if (type.equals("SBUSCHECK")) {
+            return SBUSCheckAdapter.strURL+ "/"  + filetime;
+        }
 
 
 
@@ -285,6 +289,9 @@ public class MyRecUtil {
         }
         if (type.equals("ROOMCORROSIONDETECTION")) {
             return RoomCorrosionDetectionAdapter.strURL + "/reports";
+        }
+        if (type.equals("SBUSCHECK")) {
+            return SBUSCheckAdapter.strURL + "/reports";
         }
 
         return "";
