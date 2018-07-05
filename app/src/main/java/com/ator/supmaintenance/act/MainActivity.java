@@ -22,6 +22,7 @@ import com.ator.supmaintenance.act.tables.OperatingStationCorrosionDetectionActi
 import com.ator.supmaintenance.act.tables.OperatingStationPowerActivity;
 import com.ator.supmaintenance.act.tables.PowerAllActivity;
 import com.ator.supmaintenance.act.tables.PowerCheckActivity;
+import com.ator.supmaintenance.act.tables.PowerSystemActivity;
 import com.ator.supmaintenance.act.tables.SysInfoActivity;
 import com.ator.supmaintenance.act.tables.SysRunActivity;
 import com.ator.supmaintenance.item.RtEnv;
@@ -175,7 +176,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 RtEnv.startActivity(PowerCheckActivity.class);
                 break;
             case R.id.power_system_button:
-                RtEnv.startActivity(ControlRoomActivity.class);
+                RtEnv.startActivity(PowerSystemActivity.class);
                 break;
             case R.id.room_corrosion_detection_button:
                 RtEnv.startActivity(ControlRoomActivity.class);

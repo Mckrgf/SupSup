@@ -20,6 +20,7 @@ import com.ator.supmaintenance.adapter.OperatingStationCorrosionDetectionAdapter
 import com.ator.supmaintenance.adapter.OperatingStationPowerAdapter;
 import com.ator.supmaintenance.adapter.PowerAllAdapter;
 import com.ator.supmaintenance.adapter.PowerCheckAdapter;
+import com.ator.supmaintenance.adapter.PowerSystemAdapter;
 import com.ator.supmaintenance.adapter.SysInfoAdapter;
 import com.ator.supmaintenance.adapter.SysRunAdapter;
 
@@ -206,6 +207,9 @@ public class MyRecUtil {
         if (type.equals("POWERCHECK")) {
             return PowerCheckAdapter.strURL + "/" + filetime;
         }
+        if (type.equals("POWERSYSTEM")) {
+            return PowerSystemAdapter.strURL + "/" + filetime;
+        }
 
 
 
@@ -271,6 +275,9 @@ public class MyRecUtil {
         }
         if (type.equals("POWERCHECK")) {
             return PowerCheckAdapter.strURL + "/reports";
+        }
+        if (type.equals("POWERSYSTEM")) {
+            return PowerSystemAdapter.strURL + "/reports";
         }
 
         return "";
