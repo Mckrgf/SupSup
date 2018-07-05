@@ -17,6 +17,7 @@ import com.ator.supmaintenance.act.tables.GroundCheckActivity;
 import com.ator.supmaintenance.act.tables.MasterCardCheckActivity;
 import com.ator.supmaintenance.act.tables.OpStationCheckActivity;
 import com.ator.supmaintenance.act.tables.OperatingStationActivity;
+import com.ator.supmaintenance.act.tables.OperatingStationCheckActivity;
 import com.ator.supmaintenance.act.tables.OperatingStationCorrosionDetectionActivity;
 import com.ator.supmaintenance.act.tables.PowerAllActivity;
 import com.ator.supmaintenance.act.tables.SysInfoActivity;
@@ -160,7 +161,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 RtEnv.startActivity(OperatingStationActivity.class);
                 break;
             case R.id.operating_station_check_button:
-                RtEnv.startActivity(ControlRoomActivity.class);
+                RtEnv.startActivity(OperatingStationCheckActivity.class);
                 break;
             case R.id.operating_station_corrosion_detection_button:
                 RtEnv.startActivity(OperatingStationCorrosionDetectionActivity.class);

@@ -15,6 +15,7 @@ import com.ator.supmaintenance.adapter.GroundCheckAdapter;
 import com.ator.supmaintenance.adapter.MasterCardCheckAdapter;
 import com.ator.supmaintenance.adapter.OpStationCheckAdapter;
 import com.ator.supmaintenance.adapter.OperatingStationAdapter;
+import com.ator.supmaintenance.adapter.OperatingStationCheckAdapter;
 import com.ator.supmaintenance.adapter.OperatingStationCorrosionDetectionAdapter;
 import com.ator.supmaintenance.adapter.PowerAllAdapter;
 import com.ator.supmaintenance.adapter.SysInfoAdapter;
@@ -194,6 +195,9 @@ public class MyRecUtil {
         if (type.equals("OPERATINGSTATIONCORROSIONDETECTION")) {
             return OperatingStationCorrosionDetectionAdapter.strURL + "/" + filetime;
         }
+        if (type.equals("OPERATINGSTATIONCHECK")) {
+            return OperatingStationCheckAdapter.strURL + "/" + filetime;
+        }
 
 
 
@@ -250,6 +254,9 @@ public class MyRecUtil {
         }
         if (type.equals("OPERATINGSTATIONCORROSIONDETECTION")) {
             return OperatingStationCorrosionDetectionAdapter.strURL + "/reports";
+        }
+        if (type.equals("OPERATINGSTATIONCHECK")) {
+            return OperatingStationCheckAdapter.strURL + "/reports";
         }
 
         return "";
