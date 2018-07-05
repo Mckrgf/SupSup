@@ -216,6 +216,9 @@
         <activity
             android:name=".act.tables.OperatingStationCheckActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".act.tables.OperatingStationPowerActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".act.tables.NetSettingActivity"></activity>
     </application>
 

@@ -14,24 +14,24 @@ import android.widget.Toast;
 import com.ator.supmaintenance.R;
 import com.ator.supmaintenance.act.BaseActivity;
 import com.ator.supmaintenance.act.HisFileListActivity;
-import com.ator.supmaintenance.adapter.OperatingStationCheckAdapter;
+import com.ator.supmaintenance.adapter.OperatingStationPowerAdapter;
 import com.ator.supmaintenance.item.FileUtil;
 import com.ator.supmaintenance.item.MyNetHelper;
 import com.ator.supmaintenance.item.RtEnv;
 
 import org.json.JSONObject;
 
-public class OperatingStationCheckActivity extends BaseActivity implements View.OnClickListener {
+public class OperatingStationPowerActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView mivAdd;
 
-    public OperatingStationCheckAdapter adapter = new OperatingStationCheckAdapter();
+    public OperatingStationPowerAdapter adapter = new OperatingStationPowerAdapter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_operating_station_check);
+        setContentView(R.layout.activity_operating_station_power);
 
         mivAdd = (ImageView) findViewById(R.id.iv_add1);
 
@@ -43,7 +43,7 @@ public class OperatingStationCheckActivity extends BaseActivity implements View.
         findViewById(R.id.im_erase).setOnClickListener(this);
 
         TextView tv_cpName = findViewById(R.id.tv_cpName);
-        tv_cpName.setText("操作站通讯检查");
+        tv_cpName.setText("操作站供电");
 
         loadTmpfile();
 
@@ -51,7 +51,7 @@ public class OperatingStationCheckActivity extends BaseActivity implements View.
 
     @Override
     protected int initContentView() {
-        return R.layout.activity_operating_station_check;
+        return R.layout.activity_operating_station_power;
     }
 
     @Override
@@ -100,7 +100,7 @@ public class OperatingStationCheckActivity extends BaseActivity implements View.
     }
 
 
-    private String mTmpSub = "TEMP-OPERATINGSTATIONCHECK";
+    private String mTmpSub = "TEMP-OPERATINGSTATIONPOWER";
 
     private void saveTmpfile() {
 
@@ -128,12 +128,12 @@ public class OperatingStationCheckActivity extends BaseActivity implements View.
                 JSONObject obj = new JSONObject(result);
 
                 ((EditText) findViewById(R.id.operating_station_num )).setText(obj.getString("operating_station_num"  ));
+                ((EditText) findViewById(R.id.ac_value )).setText(obj.getString("ac_value"  ));
+                ((EditText) findViewById(R.id.harmonic_value )).setText(obj.getString("harmonic_value"  ));
 
-                SetRGtext(R.id.has_line_identified           , obj.getString("has_line_identified"            ));
-                SetRGtext(R.id.a_communication     , obj.getString("a_communication"      ));
-                SetRGtext(R.id.b_communication         , obj.getString("b_communication"          ));
-                SetRGtext(R.id.c_communication     , obj.getString("c_communication"      ));
-                SetRGtext(R.id.net_close         , obj.getString("net_close"          ));
+                SetRGtext(R.id.has_two_way     , obj.getString("has_two_way"      ));
+                SetRGtext(R.id.has_switcher         , obj.getString("has_switcher"          ));
+                SetRGtext(R.id.has_more_line     , obj.getString("has_more_line"      ));
 
                 ((EditText) findViewById(R.id.suggestion)).setText(obj.getString("suggestion"));
 
@@ -154,12 +154,12 @@ public class OperatingStationCheckActivity extends BaseActivity implements View.
     private void Clearall() {
 
         ((EditText) findViewById(R.id.operating_station_num )).setText("");
+        ((EditText) findViewById(R.id.ac_value )).setText("");
+        ((EditText) findViewById(R.id.harmonic_value )).setText("");
 
-        SetRGtext(R.id.has_line_identified           ,         "");
-        SetRGtext(R.id.a_communication     ,         "");
-        SetRGtext(R.id.b_communication         ,         "");
-        SetRGtext(R.id.c_communication     ,         "");
-        SetRGtext(R.id.net_close         ,         "");
+        SetRGtext(R.id.has_two_way           ,         "");
+        SetRGtext(R.id.has_switcher     ,         "");
+        SetRGtext(R.id.has_more_line         ,         "");
 
         ((EditText) findViewById(R.id.suggestion)).setText("");
 
@@ -181,12 +181,13 @@ public class OperatingStationCheckActivity extends BaseActivity implements View.
 
     private void setAdapter() {
         adapter.operating_station_num    = ((EditText) findViewById(R.id.operating_station_num    )).getText().toString().trim();
+        adapter.ac_value                 = ((EditText) findViewById(R.id.ac_value                 )).getText().toString().trim();
+        adapter.harmonic_value           = ((EditText) findViewById(R.id.harmonic_value           )).getText().toString().trim();
 
-        adapter.has_line_identified           = GetRGtext(R.id.has_line_identified           );
-        adapter.a_communication     = GetRGtext(R.id.a_communication     );
-        adapter.b_communication         = GetRGtext(R.id.b_communication         );
-        adapter.c_communication     = GetRGtext(R.id.c_communication     );
-        adapter.net_close         = GetRGtext(R.id.net_close         );
+
+        adapter.has_two_way       = GetRGtext(R.id.    has_two_way       );
+        adapter.has_switcher          = GetRGtext(R.id.has_switcher          );
+        adapter.has_more_line     = GetRGtext(R.id.    has_more_line     );
 
         adapter.suggestion = ((EditText) findViewById(R.id.suggestion)).getText().toString().trim();
 
@@ -202,7 +203,7 @@ public class OperatingStationCheckActivity extends BaseActivity implements View.
         return adapter.CheckAll();
     }
 
-    private static final String TAG_CAB = "OPERATINGSTATIONCHECK";
+    private static final String TAG_CAB = "OPERATINGSTATIONPOWER";
 
     private boolean SubMit() {
 
@@ -255,7 +256,7 @@ public class OperatingStationCheckActivity extends BaseActivity implements View.
             }
             break;
             case R.id.im_erase: {
-                new AlertDialog.Builder(OperatingStationCheckActivity.this).setTitle("系统提示")//设置对话框标题
+                new AlertDialog.Builder(OperatingStationPowerActivity.this).setTitle("系统提示")//设置对话框标题
                         .setMessage("是否清空数据？")//设置显示的内容
                         .setPositiveButton("确定", new DialogInterface.OnClickListener() {//添加确定按钮
                             @Override

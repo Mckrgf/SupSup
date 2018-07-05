@@ -17,6 +17,7 @@ import com.ator.supmaintenance.adapter.OpStationCheckAdapter;
 import com.ator.supmaintenance.adapter.OperatingStationAdapter;
 import com.ator.supmaintenance.adapter.OperatingStationCheckAdapter;
 import com.ator.supmaintenance.adapter.OperatingStationCorrosionDetectionAdapter;
+import com.ator.supmaintenance.adapter.OperatingStationPowerAdapter;
 import com.ator.supmaintenance.adapter.PowerAllAdapter;
 import com.ator.supmaintenance.adapter.SysInfoAdapter;
 import com.ator.supmaintenance.adapter.SysRunAdapter;
@@ -198,6 +199,9 @@ public class MyRecUtil {
         if (type.equals("OPERATINGSTATIONCHECK")) {
             return OperatingStationCheckAdapter.strURL + "/" + filetime;
         }
+        if (type.equals("OPERATINGSTATIONPOWER")) {
+            return OperatingStationPowerAdapter.strURL + "/" + filetime;
+        }
 
 
 
@@ -257,6 +261,9 @@ public class MyRecUtil {
         }
         if (type.equals("OPERATINGSTATIONCHECK")) {
             return OperatingStationCheckAdapter.strURL + "/reports";
+        }
+        if (type.equals("OPERATINGSTATIONPOWER")) {
+            return OperatingStationPowerAdapter.strURL + "/reports";
         }
 
         return "";

@@ -43,7 +43,7 @@ public class OperatingStationCorrosionDetectionActivity extends BaseActivity imp
         findViewById(R.id.im_erase).setOnClickListener(this);
 
         TextView tv_cpName = findViewById(R.id.tv_cpName);
-        tv_cpName.setText("操作站");
+        tv_cpName.setText("操作站腐蚀检查");
 
         loadTmpfile();
 
