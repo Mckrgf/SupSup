@@ -25,8 +25,10 @@ import com.ator.supmaintenance.act.tables.PowerCheckActivity;
 import com.ator.supmaintenance.act.tables.PowerSystemActivity;
 import com.ator.supmaintenance.act.tables.RoomCorrosionDetectionActivity;
 import com.ator.supmaintenance.act.tables.SBUSCheckActivity;
+import com.ator.supmaintenance.act.tables.SCNETCheckActivity;
 import com.ator.supmaintenance.act.tables.SysInfoActivity;
 import com.ator.supmaintenance.act.tables.SysRunActivity;
+import com.ator.supmaintenance.act.tables.SystemPowerCheckActivity;
 import com.ator.supmaintenance.item.RtEnv;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
@@ -187,10 +189,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 RtEnv.startActivity(SBUSCheckActivity.class);
                 break;
             case R.id.scnet_check_button:
-                RtEnv.startActivity(ControlRoomActivity.class);
+                RtEnv.startActivity(SCNETCheckActivity.class);
                 break;
             case R.id.system_power_check_button:
-                RtEnv.startActivity(ControlRoomActivity.class);
+                RtEnv.startActivity(SystemPowerCheckActivity.class);
                 break;
 
         }

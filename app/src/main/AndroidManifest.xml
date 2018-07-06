@@ -231,6 +231,12 @@
         <activity
             android:name=".act.tables.SBUSCheckActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".act.tables.SCNETCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".act.tables.SystemPowerCheckActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".act.tables.NetSettingActivity"></activity>
     </application>
 

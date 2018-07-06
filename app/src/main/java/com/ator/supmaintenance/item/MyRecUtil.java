@@ -23,8 +23,10 @@ import com.ator.supmaintenance.adapter.PowerCheckAdapter;
 import com.ator.supmaintenance.adapter.PowerSystemAdapter;
 import com.ator.supmaintenance.adapter.RoomCorrosionDetectionAdapter;
 import com.ator.supmaintenance.adapter.SBUSCheckAdapter;
+import com.ator.supmaintenance.adapter.SCNETCheckAdapter;
 import com.ator.supmaintenance.adapter.SysInfoAdapter;
 import com.ator.supmaintenance.adapter.SysRunAdapter;
+import com.ator.supmaintenance.adapter.SystemPowerCheckAdapter;
 
 import org.json.JSONObject;
 
@@ -218,8 +220,12 @@ public class MyRecUtil {
         if (type.equals("SBUSCHECK")) {
             return SBUSCheckAdapter.strURL+ "/"  + filetime;
         }
-
-
+        if (type.equals("SCNETCHECK")) {
+            return SCNETCheckAdapter.strURL+ "/"  + filetime;
+        }
+        if (type.equals("SYSTEMPOWERCHECK")) {
+            return SystemPowerCheckAdapter.strURL+ "/"  + filetime;
+        }
 
 
 
@@ -292,6 +298,12 @@ public class MyRecUtil {
         }
         if (type.equals("SBUSCHECK")) {
             return SBUSCheckAdapter.strURL + "/reports";
+        }
+        if (type.equals("SCNETCHECK")) {
+            return SCNETCheckAdapter.strURL + "/reports";
+        }
+        if (type.equals("SYSTEMPOWERCHECK")) {
+            return SystemPowerCheckAdapter.strURL + "/reports";
         }
 
         return "";

@@ -105,7 +105,7 @@ public class MyApplication extends Application implements AMapLocationListener {
     /**
      * 一些公共参数 统一放到这里管理
      */
-//    public static  String base_url = "http://192.168.8.105:8080";//本地测试服务器地址
-    public static  String base_url = "http://118.31.42.34:8090";//云上服务器
+    public static  String base_url = "http://192.168.8.104:8080";//本地测试服务器地址
+//    public static  String base_url = "http://118.31.42.34:8090";//云上服务器
 
 }
