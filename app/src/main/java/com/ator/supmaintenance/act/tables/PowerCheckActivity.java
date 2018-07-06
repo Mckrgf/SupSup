@@ -26,6 +26,7 @@ public class PowerCheckActivity extends BaseActivity implements View.OnClickList
     private ImageView mivAdd;
 
     public PowerCheckAdapter adapter = new PowerCheckAdapter();
+    private boolean do_not_save_file = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +97,9 @@ public class PowerCheckActivity extends BaseActivity implements View.OnClickList
     @Override
     protected void onStop() {
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
     }
 
 
@@ -118,6 +121,7 @@ public class PowerCheckActivity extends BaseActivity implements View.OnClickList
 
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.tmp");
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.png");
+        do_not_save_file = true;
     }
 
     private void loadTmpfile() {

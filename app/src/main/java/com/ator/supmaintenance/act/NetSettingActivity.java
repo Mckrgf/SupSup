@@ -1,6 +1,5 @@
-package com.ator.supmaintenance.act.tables;
+package com.ator.supmaintenance.act;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -8,7 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ator.supmaintenance.R;
-import com.ator.supmaintenance.act.BaseActivity;
 import com.ator.supmaintenance.item.MyApplication;
 import com.ator.supmaintenance.item.SPUtils;
 

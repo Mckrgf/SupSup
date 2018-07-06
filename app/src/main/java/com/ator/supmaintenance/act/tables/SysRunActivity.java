@@ -27,6 +27,7 @@ public class SysRunActivity extends BaseActivity implements View.OnClickListener
     private ImageView mivAdd;
 
     public SysRunAdapter adapter = new SysRunAdapter();
+    private boolean do_not_save_file = false;
 
 
     @Override
@@ -98,7 +99,9 @@ public class SysRunActivity extends BaseActivity implements View.OnClickListener
     @Override
     protected void onStop(){
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
     }
 
     private String  mTmpSub = "TEMP-SYSRUN";
@@ -119,6 +122,7 @@ public class SysRunActivity extends BaseActivity implements View.OnClickListener
 
         FileUtil.deleteFile(getApplicationContext(),mTmpSub,"temp.tmp");
         FileUtil.deleteFile(getApplicationContext(),mTmpSub,"temp.png");
+        do_not_save_file = true;
     }
 
     private void loadTmpfile(){

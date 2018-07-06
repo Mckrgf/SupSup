@@ -30,6 +30,8 @@ public class GroundCheckActivity extends BaseActivity implements View.OnClickLis
 
     private ImageView mivAdd;
     public GroundCheckAdapter adapter = new GroundCheckAdapter();
+    private boolean do_not_save_file = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +101,9 @@ public class GroundCheckActivity extends BaseActivity implements View.OnClickLis
     @Override
     protected void onStop(){
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
     }
 
     private String  mTmpSub = "TEMP-GROUDCHECK";
@@ -121,6 +125,8 @@ public class GroundCheckActivity extends BaseActivity implements View.OnClickLis
 
         FileUtil.deleteFile(getApplicationContext(),mTmpSub,"temp.tmp");
         FileUtil.deleteFile(getApplicationContext(),mTmpSub,"temp.png");
+        do_not_save_file = true;
+
     }
 
     private void loadTmpfile(){

@@ -27,6 +27,8 @@ public class SBUSCheckActivity extends BaseActivity implements View.OnClickListe
 
     public SBUSCheckAdapter adapter = new SBUSCheckAdapter();
 
+    private boolean do_not_save_file = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,7 +98,9 @@ public class SBUSCheckActivity extends BaseActivity implements View.OnClickListe
     @Override
     protected void onStop() {
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
     }
 
 
@@ -118,6 +122,7 @@ public class SBUSCheckActivity extends BaseActivity implements View.OnClickListe
 
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.tmp");
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.png");
+        do_not_save_file = true;
     }
 
     private void loadTmpfile() {

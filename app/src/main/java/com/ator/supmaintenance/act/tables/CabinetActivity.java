@@ -26,6 +26,7 @@ public class CabinetActivity extends BaseActivity implements View.OnClickListene
     private ImageView mivAdd;
 
     public CabinetAdapter adapter = new CabinetAdapter();
+    private boolean do_not_save_file = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +96,9 @@ public class CabinetActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void onStop(){
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
     }
 
 
@@ -116,6 +119,7 @@ public class CabinetActivity extends BaseActivity implements View.OnClickListene
 
         FileUtil.deleteFile(getApplicationContext(),mTmpSub,"temp.tmp");
         FileUtil.deleteFile(getApplicationContext(),mTmpSub,"temp.png");
+    do_not_save_file = true;
     }
 
     private void loadTmpfile(){

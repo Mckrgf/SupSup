@@ -4,14 +4,12 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.ator.supmaintenance.R;
 import com.ator.supmaintenance.UI.AppUpdateDialog;
-import com.ator.supmaintenance.act.tables.NetSettingActivity;
 import com.ator.supmaintenance.item.Constant;
 import com.ator.supmaintenance.item.MyNetHelper;
 import com.ator.supmaintenance.item.RtEnv;

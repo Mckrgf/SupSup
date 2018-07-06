@@ -26,6 +26,7 @@ public class ControlRoomPowerMagnetismActivity extends BaseActivity implements V
     private ImageView mivAdd;
 
     public ControlRoomPowerMagnetismAdapter adapter = new ControlRoomPowerMagnetismAdapter();
+    private boolean do_not_save_file = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +97,9 @@ public class ControlRoomPowerMagnetismActivity extends BaseActivity implements V
     @Override
     protected void onStop() {
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
     }
 
 
@@ -118,6 +121,7 @@ public class ControlRoomPowerMagnetismActivity extends BaseActivity implements V
 
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.tmp");
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.png");
+        do_not_save_file = true;
     }
 
     private void loadTmpfile() {

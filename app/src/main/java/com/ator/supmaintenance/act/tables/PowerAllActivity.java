@@ -28,6 +28,7 @@ public class PowerAllActivity extends BaseActivity implements View.OnClickListen
     private ImageView mivAdd;
 
     public PowerAllAdapter adapter = new PowerAllAdapter();
+    private boolean do_not_save_file = false;
 
 
     @Override
@@ -98,7 +99,9 @@ public class PowerAllActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void onStop(){
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
     }
 
     private String  mTmpSub = "TEMP-ROOM";
@@ -120,6 +123,7 @@ public class PowerAllActivity extends BaseActivity implements View.OnClickListen
 
         FileUtil.deleteFile(getApplicationContext(),mTmpSub,"temp.tmp");
         FileUtil.deleteFile(getApplicationContext(),mTmpSub,"temp.png");
+        do_not_save_file = true;
     }
 
     private void loadTmpfile(){

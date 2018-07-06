@@ -26,6 +26,7 @@ public class ControlCabinetPowerActivity extends BaseActivity implements View.On
     private ImageView mivAdd;
 
     public ControlCabinetPowerAdapter adapter = new ControlCabinetPowerAdapter();
+    private boolean do_not_save_file = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +96,10 @@ public class ControlCabinetPowerActivity extends BaseActivity implements View.On
     @Override
     protected void onStop() {
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
+
     }
 
 
@@ -117,6 +121,7 @@ public class ControlCabinetPowerActivity extends BaseActivity implements View.On
 
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.tmp");
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.png");
+        do_not_save_file = true;
     }
 
     private void loadTmpfile() {

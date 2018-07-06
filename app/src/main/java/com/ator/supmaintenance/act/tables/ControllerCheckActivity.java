@@ -26,6 +26,7 @@ public class ControllerCheckActivity extends BaseActivity implements View.OnClic
     private ImageView mivAdd;
 
     public ControllerCheckAdapter adapter = new ControllerCheckAdapter();
+    private boolean do_not_save_file = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +96,10 @@ public class ControllerCheckActivity extends BaseActivity implements View.OnClic
     @Override
     protected void onStop(){
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
+
     }
 
 
@@ -116,6 +120,7 @@ public class ControllerCheckActivity extends BaseActivity implements View.OnClic
 
         FileUtil.deleteFile(getApplicationContext(),mTmpSub,"temp.tmp");
         FileUtil.deleteFile(getApplicationContext(),mTmpSub,"temp.png");
+        do_not_save_file = true;
     }
 
     private void loadTmpfile(){

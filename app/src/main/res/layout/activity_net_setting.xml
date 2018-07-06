@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ator.supmaintenance.act.tables.NetSettingActivity">
+    tools:context="com.ator.supmaintenance.act.NetSettingActivity">
 
     <TextView
         android:id="@+id/tv_url_now"

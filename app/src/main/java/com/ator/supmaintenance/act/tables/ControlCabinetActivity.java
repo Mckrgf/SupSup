@@ -26,6 +26,8 @@ public class ControlCabinetActivity extends BaseActivity implements View.OnClick
     private ImageView mivAdd;
 
     public ControlCabinetAdapter adapter = new ControlCabinetAdapter();
+    private boolean do_not_save_file = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +97,10 @@ public class ControlCabinetActivity extends BaseActivity implements View.OnClick
     @Override
     protected void onStop() {
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
+
     }
 
 
@@ -117,6 +122,7 @@ public class ControlCabinetActivity extends BaseActivity implements View.OnClick
 
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.tmp");
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.png");
+        do_not_save_file = true;
     }
 
     private void loadTmpfile() {

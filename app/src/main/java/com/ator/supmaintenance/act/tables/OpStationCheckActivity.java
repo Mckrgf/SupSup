@@ -29,6 +29,7 @@ public class OpStationCheckActivity extends BaseActivity implements View.OnClick
     private ImageView mivAdd;
 
     private OpStationCheckAdapter adapter = new OpStationCheckAdapter();
+    private boolean do_not_save_file = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +99,9 @@ public class OpStationCheckActivity extends BaseActivity implements View.OnClick
     @Override
     protected void onStop() {
         super.onStop();
-        saveTmpfile();
+        if (!do_not_save_file) {
+            saveTmpfile();
+        }
     }
 
     private String mTmpSub = "TEMP-OPERATION";
@@ -120,6 +123,7 @@ public class OpStationCheckActivity extends BaseActivity implements View.OnClick
 
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.tmp");
         FileUtil.deleteFile(getApplicationContext(), mTmpSub, "temp.png");
+        do_not_save_file = true;
     }
 
     private void loadTmpfile() {
