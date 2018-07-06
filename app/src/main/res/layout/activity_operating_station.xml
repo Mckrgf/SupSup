@@ -982,6 +982,7 @@
                                 android:id="@+id/kn_false"
                                 android:layout_width="140px"
                                 android:layout_height="54px"
+                                android:layout_marginRight="10px"
                                 android:layout_weight="1"
                                 android:background="@drawable/radiobutton_red_check_selector"
                                 android:button="@null"

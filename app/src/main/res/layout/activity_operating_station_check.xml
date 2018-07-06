@@ -276,7 +276,8 @@
 
                             <RadioButton
                                 android:id="@+id/te_ok"
-                                android:layout_width="170px"
+                                android:layout_width="100px"
+                                android:padding="10px"
                                 android:layout_height="54px"
                                 android:layout_marginRight="10px"
                                 android:background="@drawable/radiobutton_green_check_selector"
@@ -289,13 +290,28 @@
 
                             <RadioButton
                                 android:id="@+id/te_false"
-                                android:layout_width="170px"
+                                android:layout_width="100px"
+                                android:padding="10px"
                                 android:layout_height="54px"
                                 android:layout_weight="1"
                                 android:background="@drawable/radiobutton_red_check_selector"
                                 android:button="@null"
                                 android:gravity="center"
+                                android:layout_marginRight="10px"
                                 android:text="否"
+                                android:textColor="@color/radiobutton_red_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/te_false1"
+                                android:layout_width="100px"
+                                android:padding="10px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="无"
                                 android:textColor="@color/radiobutton_red_select"
                                 android:textSize="30px" />
 

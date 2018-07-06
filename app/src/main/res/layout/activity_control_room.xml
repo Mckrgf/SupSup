@@ -78,19 +78,56 @@
                         android:text="接地形式:"
                         android:textColor="@color/black"
                         android:textSize="30px" />
-
-                    <EditText
+                    <include layout="@layout/fill_view"/>
+                    <RadioGroup
                         android:id="@+id/grounding_form"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:background="@null"
-                        android:gravity="right"
-                        android:hint="请输入"
-                        android:inputType="text"
-                        android:minWidth="300px"
-                        android:textColor="@color/black"
-                        android:textSize="30px" />
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/ep_ok1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="54px"
+                            android:layout_marginRight="10px"
+                            android:background="@drawable/radiobutton_green_check_selector" android:checked="true"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:padding="10px"
+                            android:text="等电位"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/ep_false1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_green_check_selector"
+                            android:button="@null"
+                            android:layout_marginRight="10px"
+                            android:padding="10px"
+                            android:gravity="center"
+                            android:text="独立地桩"
+                            android:textColor="@color/radiobutton_green_select"
+                            android:textSize="30px" />
+
+                        <RadioButton
+                            android:id="@+id/ep_fals11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="54px"
+                            android:layout_weight="1"
+                            android:background="@drawable/radiobutton_red_check_selector"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="无法确定"
+                            android:textColor="@color/radiobutton_red_select"
+                            android:textSize="30px" />
+
+                    </RadioGroup>
+
 
                 </LinearLayout>
 
@@ -127,7 +164,7 @@
 
                             <RadioButton
                                 android:id="@+id/ep_ok"
-                                android:layout_width="170px"
+                                android:layout_width="100px"
                                 android:layout_height="54px"
                                 android:layout_marginRight="10px"
                                 android:background="@drawable/radiobutton_green_check_selector" android:checked="true"
@@ -139,13 +176,27 @@
 
                             <RadioButton
                                 android:id="@+id/ep_false"
-                                android:layout_width="170px"
+                                android:layout_width="100px"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:layout_marginRight="10px"
+
+                                android:gravity="center"
+                                android:text="否"
+                                android:textColor="@color/radiobutton_red_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/ep_fals1"
+                                android:layout_width="wrap_content"
                                 android:layout_height="54px"
                                 android:layout_weight="1"
                                 android:background="@drawable/radiobutton_red_check_selector"
                                 android:button="@null"
                                 android:gravity="center"
-                                android:text="否"
+                                android:text="无法确定"
                                 android:textColor="@color/radiobutton_red_select"
                                 android:textSize="30px" />
 
@@ -187,7 +238,7 @@
 
                             <RadioButton
                                 android:id="@+id/et_ok"
-                                android:layout_width="170px"
+                                android:layout_width="100px"
                                 android:layout_height="54px"
                                 android:layout_marginRight="10px"
                                 android:background="@drawable/radiobutton_green_check_selector" android:checked="true"
@@ -199,13 +250,27 @@
 
                             <RadioButton
                                 android:id="@+id/et_false"
-                                android:layout_width="170px"
+                                android:layout_width="100px"
                                 android:layout_height="54px"
                                 android:layout_weight="1"
                                 android:background="@drawable/radiobutton_red_check_selector"
                                 android:button="@null"
                                 android:gravity="center"
                                 android:text="否"
+                                android:layout_marginRight="10px"
+
+                                android:textColor="@color/radiobutton_red_select"
+                                android:textSize="30px" />
+
+                            <RadioButton
+                                android:id="@+id/et_fals1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="54px"
+                                android:layout_weight="1"
+                                android:background="@drawable/radiobutton_red_check_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="无法确定"
                                 android:textColor="@color/radiobutton_red_select"
                                 android:textSize="30px" />
 

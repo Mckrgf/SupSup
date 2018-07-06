@@ -129,13 +129,13 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
                 JSONObject obj = new JSONObject(result);
 
                 ((EditText) findViewById(R.id.control_room_name)).setText(obj.getString("control_room_name"));
-                ((EditText) findViewById(R.id.grounding_form)).setText(obj.getString("grounding_form"));
 
                 SetRGtext(R.id.earth_power      , obj.getString("earth_power"     ));
                 SetRGtext(R.id.earth_thunder    , obj.getString("earth_thunder"   ));
                 SetRGtext(R.id.earth            , obj.getString("earth"           ));
                 SetRGtext(R.id.total_earth      , obj.getString("total_earth"     ));
                 SetRGtext(R.id.earth_resistance , obj.getString("earth_resistance"));
+                SetRGtext(R.id.grounding_form , obj.getString("earth_resistance"));
 
                 ((EditText) findViewById(R.id.description)).setText(obj.getString("description"));
                 ((EditText) findViewById(R.id.leakage_current)).setText(obj.getString("leakage_current"));
@@ -159,7 +159,6 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
     private void Clearall() {
 
         ((EditText) findViewById(R.id.control_room_name)).setText("");
-        ((EditText) findViewById(R.id.grounding_form)).setText("");
         ((EditText) findViewById(R.id.description)).setText("");
         ((EditText) findViewById(R.id.leakage_current)).setText("");
 
@@ -168,6 +167,7 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
         SetRGtext(R.id.earth            ,         "");
         SetRGtext(R.id.total_earth      ,         "");
         SetRGtext(R.id.earth_resistance ,         "");
+        SetRGtext(R.id.grounding_form ,         "");
 
         ((EditText) findViewById(R.id.suggestion)).setText("");
 
@@ -189,7 +189,6 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
 
     private void setAdapter() {
         adapter.control_room_name = ((EditText) findViewById(R.id.control_room_name)).getText().toString().trim();
-        adapter.grounding_form = ((EditText) findViewById(R.id.grounding_form)).getText().toString().trim();
         adapter.description = ((EditText) findViewById(R.id.description)).getText().toString().trim();
         adapter.leakage_current = ((EditText) findViewById(R.id.leakage_current)).getText().toString().trim();
 
@@ -198,6 +197,7 @@ public class ControlRoomActivity extends BaseActivity implements View.OnClickLis
         adapter.earth             = GetRGtext(R.id.earth            );
         adapter.total_earth       = GetRGtext(R.id.total_earth      );
         adapter.earth_resistance  = GetRGtext(R.id.earth_resistance );
+        adapter.grounding_form  = GetRGtext(R.id.grounding_form );
 
         adapter.suggestion = ((EditText) findViewById(R.id.suggestion)).getText().toString().trim();
 
