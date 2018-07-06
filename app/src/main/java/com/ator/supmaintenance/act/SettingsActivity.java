@@ -115,7 +115,7 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                 RtEnv.startActivity(NFCCardActivity.class);
                 break;
             case R.id.tv_net:
-                RtEnv.startActivity(NetSettingActivity.class);
+//                RtEnv.startActivity(NetSettingActivity.class);
                 break;
         }
 
