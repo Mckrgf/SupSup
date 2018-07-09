@@ -13,6 +13,7 @@ import com.ator.supmaintenance.adapter.PicturePagerAdapter;
 import com.ator.supmaintenance.item.MyNetHelper;
 import com.ator.supmaintenance.item.RtEnv;
 import com.ator.supmaintenance.item.UserUtil;
+import com.ator.supmaintenance.operations.OperationMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -151,7 +152,8 @@ public class FirstActivity extends BaseActivity implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.iv_runrec:
-                RtEnv.startActivity(MainActivity.class);
+//                RtEnv.startActivity(MainActivity.class);
+                RtEnv.startActivity(OperationMainActivity.class);
                 break;
             case R.id.loc_query:
                 RtEnv.startActivity(LocationActivity.class);

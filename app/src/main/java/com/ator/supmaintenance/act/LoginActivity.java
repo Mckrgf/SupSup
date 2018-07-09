@@ -123,8 +123,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 RtEnv.startActivity(QRCodeActivity.class);
                 break;
             case R.id.btn_confirm:
-//                login();
-                RtEnv.startActivity(FirstActivity.class);
+                login();
+//                RtEnv.startActivity(FirstActivity.class);
                 finish();
                 break;
             case R.id.im_chooseuser:
