@@ -134,6 +134,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/tv_add_project"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20px"
@@ -144,6 +145,7 @@
             android:textSize="40px" />
 
         <TextView
+            android:id="@+id/tv_check_history"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="20px"

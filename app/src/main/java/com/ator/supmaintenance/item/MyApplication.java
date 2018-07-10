@@ -13,10 +13,15 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.model.LatLng;
+import com.ator.supmaintenance.operations.OperationBean;
 import com.baidu.ocr.sdk.OCR;
 import com.baidu.ocr.sdk.OnResultListener;
 import com.baidu.ocr.sdk.exception.OCRError;
 import com.baidu.ocr.sdk.model.AccessToken;
+
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by feizhenhua on 2018/4/30.
@@ -32,6 +37,7 @@ public class MyApplication extends Application implements AMapLocationListener {
     public static  double myLocLon = 0;
 
     public String imeiStr = "";
+    public static ArrayList<OperationBean> op_data;
 
     public MyApplication(){
 
@@ -52,6 +58,45 @@ public class MyApplication extends Application implements AMapLocationListener {
         InspectionUtil.getInstance().makePicFilePath(context,"MyInspectionPic");
 
 
+        //模拟运维巡检项目
+        try {
+            initOperatorData();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void initOperatorData(){
+        op_data = new ArrayList();
+
+        OperationBean bean = new OperationBean();
+        bean.setCompany("企业名称-绿科安");
+        bean.setFacilitator("服务商-中控");
+        bean.setOperator("操作人-宋奇");
+        bean.setProject("项目名-巡检项目A");
+        try {
+            bean.setStart_time(MyDateUtils.getLongDateFromString("2018-7-15",MyDateUtils.date_Format2));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        bean.setStatus(0);
+        bean.setSystem_type("300xp");
+        op_data.add(bean);
+
+        OperationBean bean1 = new OperationBean();
+        bean1.setCompany("企业名称-绿科安");
+        bean1.setFacilitator("服务商-中控");
+        bean1.setOperator("操作人-白建军");
+        bean1.setProject("项目名-巡检项目B");
+        try {
+            bean1.setStart_time(MyDateUtils.getLongDateFromString("2018-7-16",MyDateUtils.date_Format2));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        bean1.setStatus(0);
+        bean1.setSystem_type("700");
+        op_data.add(bean1);
     }
 
     @Override
