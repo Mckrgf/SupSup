@@ -1,11 +1,13 @@
 package com.ator.supmaintenance.operations;
 
+import java.io.Serializable;
+
 /**
  * Created by yaobing on 2018/7/9.
  * Description xxx
  */
 
-public class OperationBean {
+public class OperationBean implements Serializable{
     public String facilitator;      //服务商
     public String company;          //企业名称
     public String project;          //项目名
@@ -13,6 +15,16 @@ public class OperationBean {
     public String system_type;      //系统类型
     public long start_time;       //开始时间
     public long status;           //项目状态 未开始 进行中 已结束
+    public String p_id;
+
+    public String getP_id() {
+        return p_id;
+    }
+
+    public void setP_id(String p_id) {
+        this.p_id = p_id;
+    }
+
     public String getFacilitator() {
         return facilitator;
     }

@@ -1,5 +1,6 @@
 package com.ator.supmaintenance.operations;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -19,8 +20,10 @@ import android.widget.Toast;
 import com.ator.supmaintenance.R;
 import com.ator.supmaintenance.item.MyApplication;
 import com.ator.supmaintenance.item.MyDateUtils;
+import com.ator.supmaintenance.item.RtEnv;
 import com.ator.supmaintenance.item.UserUtil;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -28,7 +31,7 @@ import java.util.Date;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class OperationMainActivity extends AppCompatActivity implements View.OnClickListener {
+public class OperationMainActivity extends AppCompatActivity implements View.OnClickListener, Serializable {
 
     @BindView(R.id.im_back)
     ImageView imBack;
@@ -63,6 +66,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
     private EditText et_time;
     private RadioButton rb_300;
     private RadioButton rb_700;
+    private EditText et_pid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +120,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                 et_time.setText(MyDateUtils.getCurTime(MyDateUtils.date_Format2));
                 rb_700 = dialog.getWindow().findViewById(R.id.rb_700);
                 rb_300 = dialog.getWindow().findViewById(R.id.rb_300);
+                et_pid = dialog.getWindow().findViewById(R.id.et_pid);
 
                 break;
             case R.id.bt_cancel:
@@ -125,6 +130,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                 if (!(et_facilitator.getText().toString().equals(""))
                         && !(et_company.getText().toString().equals(""))
                         && !(et_project.getText().toString().equals(""))
+                        && !(et_pid.getText().toString().equals(""))
                         && !(et_operator.getText().toString().equals(""))
                         && !(et_time.getText().toString().equals(""))) {
                     OperationBean bean = new OperationBean();
@@ -132,6 +138,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                     bean.setCompany(String.valueOf(et_company.getText()));
                     bean.setProject(String.valueOf(et_project.getText()));
                     bean.setOperator(String.valueOf(et_operator.getText()));
+                    bean.setP_id(String.valueOf(et_pid.getText()));
                     if (rb_300.isChecked()) {
                         bean.setSystem_type("300xp");
                     }else {
@@ -164,13 +171,14 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
 
         @Override
         public void onBindViewHolder(OpViewHolder holder, int position) {
-            OperationBean bean = MyApplication.op_data.get(position);
+            final OperationBean bean = MyApplication.op_data.get(position);
             holder.tv_company.setText(bean.getCompany());
             holder.tv_facilitator.setText(bean.getFacilitator());
             holder.tv_operator.setText(bean.getOperator());
             holder.tv_project.setText(bean.getProject());
             holder.tv_time.setText(MyDateUtils.getDateFromLong(bean.getStart_time(), MyDateUtils.date_Format2));
             holder.tv_type.setText(bean.getSystem_type());
+            holder.pid.setText(bean.getP_id());
 
             holder.tv_submit.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -183,6 +191,15 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                 @Override
                 public void onClick(View view) {
 
+                }
+            });
+
+            holder.item_op_list.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(OperationMainActivity.this,OperationDetailActivity.class);
+                    intent.putExtra("BEAN", (Serializable) bean);
+                    startActivity(intent);
                 }
             });
         }
@@ -202,6 +219,8 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
             private TextView tv_submit;
             private TextView tv_operator;
             private TextView tv_stop;
+            private LinearLayout item_op_list;
+            private TextView pid;
 
             OpViewHolder(View itemView) {
                 super(itemView);
@@ -214,6 +233,8 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                 tv_submit = itemView.findViewById(R.id.tv_submit);
                 tv_stop = itemView.findViewById(R.id.tv_stop);
                 tv_facilitator = itemView.findViewById(R.id.tv_facilitator);
+                item_op_list = itemView.findViewById(R.id.item_op_list);
+                pid = itemView.findViewById(R.id.tv_pid);
 
             }
         }

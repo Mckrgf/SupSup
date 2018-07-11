@@ -75,6 +75,7 @@ public class MyApplication extends Application implements AMapLocationListener {
         bean.setFacilitator("服务商-中控");
         bean.setOperator("操作人-宋奇");
         bean.setProject("项目名-巡检项目A");
+        bean.setP_id("201807110001");
         try {
             bean.setStart_time(MyDateUtils.getLongDateFromString("2018-7-15",MyDateUtils.date_Format2));
         } catch (ParseException e) {
@@ -89,6 +90,7 @@ public class MyApplication extends Application implements AMapLocationListener {
         bean1.setFacilitator("服务商-中控");
         bean1.setOperator("操作人-白建军");
         bean1.setProject("项目名-巡检项目B");
+        bean1.setP_id("201807110002");
         try {
             bean1.setStart_time(MyDateUtils.getLongDateFromString("2018-7-16",MyDateUtils.date_Format2));
         } catch (ParseException e) {

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/item_op_list">
 
     <LinearLayout
         android:visibility="gone"
@@ -141,8 +142,6 @@
                 android:background="@drawable/bg_item"/>
 
             <LinearLayout
-                android:visibility="gone"
-                android:id="@+id/ll_1ine7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_item"
@@ -150,7 +149,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_des"
+                    android:id="@+id/tv_pid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/gray_500"

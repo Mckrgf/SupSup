@@ -238,7 +238,8 @@
             android:name=".act.tables.SystemPowerCheckActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".act.NetSettingActivity" />
-        <activity android:name=".operations.OperationMainActivity"></activity>
+        <activity android:name=".operations.OperationMainActivity" />
+        <activity android:name=".operations.OperationDetailActivity"></activity>
     </application>
 
 </manifest>
