@@ -94,13 +94,29 @@
             android:layout_height="wrap_content"
             android:text="系统类型: " />
 
-        <EditText
-            android:id="@+id/et_system_type"
+        <RadioGroup
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="right"
-            android:hint="请输入" />
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_700"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:layout_height="wrap_content"
+                android:text="700"/>
+
+
+            <RadioButton
+                android:id="@+id/rb_300"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="300xp"/>
+
+        </RadioGroup>
 
     </LinearLayout>
 

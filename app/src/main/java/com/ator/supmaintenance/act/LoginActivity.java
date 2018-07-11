@@ -125,7 +125,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             case R.id.btn_confirm:
                 login();
 //                RtEnv.startActivity(FirstActivity.class);
-                finish();
+//                finish();
                 break;
             case R.id.im_chooseuser:
                 pvOptions.show();

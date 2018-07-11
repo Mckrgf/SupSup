@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,8 +60,9 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
     private EditText et_company;
     private EditText et_project;
     private EditText et_operator;
-    private EditText et_system_type;
     private EditText et_time;
+    private RadioButton rb_300;
+    private RadioButton rb_700;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,8 +112,10 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                 et_company = dialog.getWindow().findViewById(R.id.et_company);
                 et_project = dialog.getWindow().findViewById(R.id.et_project);
                 et_operator = dialog.getWindow().findViewById(R.id.et_operator);
-                et_system_type = dialog.getWindow().findViewById(R.id.et_system_type);
                 et_time = dialog.getWindow().findViewById(R.id.et_time);
+                et_time.setText(MyDateUtils.getCurTime(MyDateUtils.date_Format2));
+                rb_700 = dialog.getWindow().findViewById(R.id.rb_700);
+                rb_300 = dialog.getWindow().findViewById(R.id.rb_300);
 
                 break;
             case R.id.bt_cancel:
@@ -122,20 +126,24 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                         && !(et_company.getText().toString().equals(""))
                         && !(et_project.getText().toString().equals(""))
                         && !(et_operator.getText().toString().equals(""))
-                        && !(et_system_type.getText().toString().equals(""))
                         && !(et_time.getText().toString().equals(""))) {
                     OperationBean bean = new OperationBean();
                     bean.setFacilitator(String.valueOf(et_facilitator.getText()));
                     bean.setCompany(String.valueOf(et_company.getText()));
                     bean.setProject(String.valueOf(et_project.getText()));
                     bean.setOperator(String.valueOf(et_operator.getText()));
-                    bean.setSystem_type(String.valueOf(et_system_type.getText()));
+                    if (rb_300.isChecked()) {
+                        bean.setSystem_type("300xp");
+                    }else {
+                        bean.setSystem_type("700");
+                    }
                     try {
                         bean.setStart_time(MyDateUtils.getLongDateFromString(String.valueOf(et_time.getText()), MyDateUtils.date_Format2));
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
                     MyApplication.op_data.add(bean);
+                    Toast.makeText(this,"添加成功",Toast.LENGTH_SHORT).show();
                     initData();
                     dialog.cancel();
                 } else {
