@@ -68,6 +68,7 @@ public class OperationDetailActivity extends AppCompatActivity implements View.O
     }
 
     private void initView() {
+        getSupportActionBar().hide();
         imBack.setOnClickListener(this);
         tvTitle.setText("巡检项目详情");
         imMenu.setImageResource(R.drawable.add);

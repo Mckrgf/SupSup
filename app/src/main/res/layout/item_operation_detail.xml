@@ -2,19 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginRight="20px"
-    android:layout_marginLeft="20px"
-    android:layout_marginTop="10px"
     android:id="@+id/item_op_list">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="装置名称: "/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="40px"
+        android:text="装置名称: "/>
+
+    <include layout="@layout/fill_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="40px"
+        android:text="aaaaaa"
         android:id="@+id/tv_eq_name"/>
 
 </LinearLayout>

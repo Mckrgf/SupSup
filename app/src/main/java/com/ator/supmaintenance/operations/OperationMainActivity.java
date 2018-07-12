@@ -96,6 +96,8 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
 
     private void initView() {
         tvAddProject.setOnClickListener(this);
+        getSupportActionBar().hide();
+        tvTitle.setText("运维巡检");
     }
 
     @Override

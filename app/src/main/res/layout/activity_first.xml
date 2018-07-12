@@ -103,14 +103,14 @@
                 android:layout_height="64dp"
                 android:background="@drawable/mission_checked"
                 android:alpha="0"
-                android:scaleType="matrix" />
+                android:3scaleType="matrix" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14dp"
                 android:alpha="0"
-                android:text="机柜巡检"/>
+                android:text="运维巡检"/>
 
         </LinearLayout>
 
