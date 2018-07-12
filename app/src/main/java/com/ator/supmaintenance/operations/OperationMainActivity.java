@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ator.supmaintenance.R;
+import com.ator.supmaintenance.act.MainActivity;
 import com.ator.supmaintenance.item.MyApplication;
 import com.ator.supmaintenance.item.MyDateUtils;
 import com.ator.supmaintenance.item.RtEnv;
@@ -98,6 +99,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
         tvAddProject.setOnClickListener(this);
         getSupportActionBar().hide();
         tvTitle.setText("运维巡检");
+        imMenu.setOnClickListener(this);
     }
 
     @Override
@@ -159,7 +161,10 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                     Toast.makeText(this, "所有字段均不能为空", Toast.LENGTH_SHORT).show();
                 }
                 break;
-
+            case R.id.im_menu:
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 
