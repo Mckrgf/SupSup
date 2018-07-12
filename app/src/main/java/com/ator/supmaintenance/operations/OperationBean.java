@@ -1,23 +1,34 @@
 package com.ator.supmaintenance.operations;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by yaobing on 2018/7/9.
- * Description xxx
+ * Description 项目实体类
  */
 
-public class OperationBean implements Serializable{
-    public String facilitator;      //服务商
-    public String company;          //企业名称
-    public String project;          //项目名
-    public String operator;         //操作人
-    public String system_type;      //系统类型
-    public long start_time;       //开始时间
-    public long status;           //项目状态 未开始 进行中 已结束
-    public String p_id;
+public class OperationBean implements Serializable {
+    private String facilitator;      //服务商
+    private String company;          //企业名称
+    private String project;          //项目名
+    private String operator;         //操作人
+    private String system_type;      //系统类型
+    private long start_time;         //开始时间
+    private long status;             //项目状态 未开始 进行中 已结束
+    private String p_id;             //合同编号
+    private ArrayList<String> equipment;     //项目中设备列表
 
-    public String getP_id() {
+    public ArrayList<String> getEquipment() {
+        return equipment;
+    }
+
+    public void setEquipment(ArrayList<String> equipment) {
+        this.equipment = equipment;
+    }
+
+
+    String getP_id() {
         return p_id;
     }
 
@@ -25,7 +36,7 @@ public class OperationBean implements Serializable{
         this.p_id = p_id;
     }
 
-    public String getFacilitator() {
+    String getFacilitator() {
         return facilitator;
     }
 
@@ -33,7 +44,7 @@ public class OperationBean implements Serializable{
         this.facilitator = facilitator;
     }
 
-    public String getCompany() {
+    String getCompany() {
         return company;
     }
 
@@ -41,7 +52,7 @@ public class OperationBean implements Serializable{
         this.company = company;
     }
 
-    public String getProject() {
+    String getProject() {
         return project;
     }
 
@@ -49,7 +60,7 @@ public class OperationBean implements Serializable{
         this.project = project;
     }
 
-    public String getOperator() {
+    String getOperator() {
         return operator;
     }
 
@@ -57,7 +68,7 @@ public class OperationBean implements Serializable{
         this.operator = operator;
     }
 
-    public String getSystem_type() {
+    String getSystem_type() {
         return system_type;
     }
 
@@ -65,7 +76,7 @@ public class OperationBean implements Serializable{
         this.system_type = system_type;
     }
 
-    public long getStart_time() {
+    long getStart_time() {
         return start_time;
     }
 
@@ -73,16 +84,16 @@ public class OperationBean implements Serializable{
         this.start_time = start_time;
     }
 
-    public long getStatus() {
+    private long getStatus() {
         return status;
     }
 
-    public void setStatus(long status) {
-        this.status = status;
+    public void setStatus() {
+        this.status = (long) 0;
     }
 
     @Override
     public String toString() {
-        return getCompany()+"\n"+getFacilitator()+"\n"+getOperator()+"\n"+getProject()+"\n"+getSystem_type()+"\n"+getStart_time()+"\n"+getStatus()+"\n";
+        return getCompany() + "\n" + getFacilitator() + "\n" + getOperator() + "\n" + getProject() + "\n" + getSystem_type() + "\n" + getStart_time() + "\n" + getStatus() + "\n";
     }
 }

@@ -170,7 +170,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
         }
 
         @Override
-        public void onBindViewHolder(OpViewHolder holder, int position) {
+        public void onBindViewHolder(OpViewHolder holder, final int position) {
             final OperationBean bean = MyApplication.op_data.get(position);
             holder.tv_company.setText(bean.getCompany());
             holder.tv_facilitator.setText(bean.getFacilitator());
@@ -198,7 +198,8 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(OperationMainActivity.this,OperationDetailActivity.class);
-                    intent.putExtra("BEAN", (Serializable) bean);
+                    intent.putExtra("BEAN", (Serializable) MyApplication.op_data.get(position));
+                    intent.putExtra("POS",position);
                     startActivity(intent);
                 }
             });

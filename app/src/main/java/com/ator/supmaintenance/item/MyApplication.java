@@ -2,11 +2,7 @@ package com.ator.supmaintenance.item;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.telephony.TelephonyManager;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -14,14 +10,9 @@ import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.model.LatLng;
 import com.ator.supmaintenance.operations.OperationBean;
-import com.baidu.ocr.sdk.OCR;
-import com.baidu.ocr.sdk.OnResultListener;
-import com.baidu.ocr.sdk.exception.OCRError;
-import com.baidu.ocr.sdk.model.AccessToken;
 
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Created by feizhenhua on 2018/4/30.
@@ -70,21 +61,30 @@ public class MyApplication extends Application implements AMapLocationListener {
     private void initOperatorData(){
         op_data = new ArrayList();
 
+        ArrayList<String> equipments = new ArrayList<>();
+        equipments.add("装置-EOPO");
+        equipments.add("装置-绿科安");
         OperationBean bean = new OperationBean();
         bean.setCompany("企业名称-绿科安");
         bean.setFacilitator("服务商-中控");
         bean.setOperator("操作人-宋奇");
         bean.setProject("项目名-巡检项目A");
         bean.setP_id("201807110001");
+        //mtk
         try {
             bean.setStart_time(MyDateUtils.getLongDateFromString("2018-7-15",MyDateUtils.date_Format2));
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        bean.setStatus(0);
+        bean.setStatus();
         bean.setSystem_type("300xp");
+        bean.setEquipment(equipments);
         op_data.add(bean);
 
+
+        ArrayList<String> equipments1 = new ArrayList<>();
+        equipments1.add("装置-六车间");
+        equipments1.add("装置-七车间");
         OperationBean bean1 = new OperationBean();
         bean1.setCompany("企业名称-绿科安");
         bean1.setFacilitator("服务商-中控");
@@ -96,7 +96,8 @@ public class MyApplication extends Application implements AMapLocationListener {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        bean1.setStatus(0);
+        bean1.setStatus();
+        bean1.setEquipment(equipments1);
         bean1.setSystem_type("700");
         op_data.add(bean1);
     }
