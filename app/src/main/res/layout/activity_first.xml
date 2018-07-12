@@ -103,7 +103,7 @@
                 android:layout_height="64dp"
                 android:background="@drawable/mission_checked"
                 android:alpha="0"
-                android:3scaleType="matrix" />
+                android:scaleType="matrix" />
 
             <TextView
                 android:layout_width="wrap_content"
