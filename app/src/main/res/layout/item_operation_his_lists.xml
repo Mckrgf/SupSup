@@ -83,6 +83,15 @@
                         android:textColor="@color/gray_time"
                         android:textSize="16dp" />
 
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/tv_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/gray_time"
+                        android:textSize="10dp" />
+
                 </LinearLayout>
 
                 <LinearLayout

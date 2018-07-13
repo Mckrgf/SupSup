@@ -82,6 +82,11 @@ public class OperationHistoryActivity extends AppCompatActivity implements View.
             holder.tv_time.setText(MyDateUtils.getDateFromLong(bean.getStart_time(), MyDateUtils.date_Format2));
             holder.tv_type.setText(bean.getSystem_type());
             holder.pid.setText(bean.getP_id());
+            if (bean.getStatus()==0) {
+                holder.tv_status.setText("状态: 待办");
+            }else {
+                holder.tv_status.setText("状态: 已提交");
+            }
 
             holder.item_op_list.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -109,6 +114,7 @@ public class OperationHistoryActivity extends AppCompatActivity implements View.
             private TextView tv_operator;
             private LinearLayout item_op_list;
             private TextView pid;
+            private TextView tv_status;
 
             OpViewHolder(View itemView) {
                 super(itemView);
@@ -121,6 +127,7 @@ public class OperationHistoryActivity extends AppCompatActivity implements View.
                 tv_facilitator = itemView.findViewById(R.id.tv_facilitator);
                 item_op_list = itemView.findViewById(R.id.item_op_list);
                 pid = itemView.findViewById(R.id.tv_pid);
+                tv_status = itemView.findViewById(R.id.tv_status);
 
             }
         }

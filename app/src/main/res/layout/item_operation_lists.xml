@@ -83,6 +83,16 @@
                         android:textColor="@color/gray_time"
                         android:textSize="16dp" />
 
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/tv_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:text="任务状态"
+                        android:textColor="@color/gray_time"
+                        android:textSize="10dp" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -240,6 +250,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
