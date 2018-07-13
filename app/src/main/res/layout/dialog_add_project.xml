@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="right"
-            android:hint="请输入" />
+            android:text="中控技术" />
 
     </LinearLayout>
 
@@ -116,25 +116,25 @@
 
         <RadioGroup
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/rb_700"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:checked="true"
                 android:layout_height="wrap_content"
-                android:text="700"/>
+                android:layout_weight="1"
+                android:text="700" />
 
 
             <RadioButton
                 android:id="@+id/rb_300"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="300xp"/>
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="300xp" />
 
         </RadioGroup>
 
@@ -169,14 +169,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="确认"/>
+            android:text="确认" />
 
         <Button
             android:id="@+id/bt_cancel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="取消"/>
+            android:text="取消" />
 
     </LinearLayout>
 
