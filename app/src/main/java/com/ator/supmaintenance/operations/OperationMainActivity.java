@@ -27,7 +27,9 @@ import com.ator.supmaintenance.item.UserUtil;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -68,6 +70,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
     private RadioButton rb_300;
     private RadioButton rb_700;
     private EditText et_pid;
+    private ArrayList<OperationBean> op_data_ing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +82,15 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
     }
 
     private void initData() {
+
+        //筛选出非完成/非终止状态的任务
+        op_data_ing = new ArrayList<>();
+        for (int i = 0; i < MyApplication.op_data.size(); i++) {
+            if (MyApplication.op_data.get(i).getStatus() == 0) {
+                op_data_ing.add(MyApplication.op_data.get(i));
+            }
+        }
+
         Date dd = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
         String strTime = sdf.format(dd);
@@ -91,7 +103,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
         Adapter adapter = new Adapter();
         recyclerView.setAdapter(adapter);
 
-        tvTaskcount.setText("" + MyApplication.op_data.size());
+        tvTaskcount.setText("" + op_data_ing.size());
         tvTime.setText(MyDateUtils.getCurTime(MyDateUtils.date_Format2));
     }
 
@@ -100,6 +112,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
         getSupportActionBar().hide();
         tvTitle.setText("运维巡检");
         imMenu.setOnClickListener(this);
+        tvCheckHistory.setOnClickListener(this);
     }
 
     @Override
@@ -145,7 +158,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                     bean.setP_id(String.valueOf(et_pid.getText()));
                     if (rb_300.isChecked()) {
                         bean.setSystem_type("300xp");
-                    }else {
+                    } else {
                         bean.setSystem_type("700");
                     }
                     try {
@@ -154,7 +167,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                         e.printStackTrace();
                     }
                     MyApplication.op_data.add(bean);
-                    Toast.makeText(this,"添加成功",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "添加成功", Toast.LENGTH_SHORT).show();
                     initData();
                     dialog.cancel();
                 } else {
@@ -164,6 +177,11 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
             case R.id.im_menu:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.tv_check_history:
+                Intent intent1 = new Intent(this, OperationHistoryActivity.class);
+                startActivity(intent1);
                 break;
         }
     }
@@ -178,7 +196,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
 
         @Override
         public void onBindViewHolder(OpViewHolder holder, final int position) {
-            final OperationBean bean = MyApplication.op_data.get(position);
+            final OperationBean bean = op_data_ing.get(position);
             holder.tv_company.setText(bean.getCompany());
             holder.tv_facilitator.setText(bean.getFacilitator());
             holder.tv_operator.setText(bean.getOperator());
@@ -190,23 +208,24 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
             holder.tv_submit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    for (int i = 0; i < MyApplication.op_data.size(); i++) {
+                        if (MyApplication.op_data.get(i).equals(bean)) {
+                            MyApplication.op_data.get(i).setStatus(1);
+                            break;
+                        }
+                    }
+                    Toast.makeText(OperationMainActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
 
-                }
-            });
-
-            holder.tv_stop.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
+                    initData();
                 }
             });
 
             holder.item_op_list.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(OperationMainActivity.this,OperationDetailActivity.class);
-                    intent.putExtra("BEAN", (Serializable) MyApplication.op_data.get(position));
-                    intent.putExtra("POS",position);
+                    Intent intent = new Intent(OperationMainActivity.this, OperationDetailActivity.class);
+                    intent.putExtra("BEAN", (Serializable) op_data_ing.get(position));
+                    intent.putExtra("POS", position);
                     startActivity(intent);
                 }
             });
@@ -214,7 +233,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
 
         @Override
         public int getItemCount() {
-            return MyApplication.op_data.size();
+            return op_data_ing.size();
         }
 
         class OpViewHolder extends RecyclerView.ViewHolder {

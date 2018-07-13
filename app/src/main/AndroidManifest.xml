@@ -239,7 +239,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".act.NetSettingActivity" />
         <activity android:name=".operations.OperationMainActivity" />
-        <activity android:name=".operations.OperationDetailActivity"></activity>
+        <activity android:name=".operations.OperationDetailActivity" />
+        <activity android:name=".operations.OperationHistoryActivity"></activity>
     </application>
 
 </manifest>

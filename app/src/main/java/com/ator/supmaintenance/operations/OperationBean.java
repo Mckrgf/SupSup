@@ -15,7 +15,7 @@ public class OperationBean implements Serializable {
     private String operator;         //操作人
     private String system_type;      //系统类型
     private long start_time;         //开始时间
-    private long status;             //项目状态 未开始 进行中 已结束
+    private int status;             //项目状态 0正常 1提交 2终止
     private String p_id;             //合同编号
     private ArrayList<String> equipment;     //项目中设备列表
 
@@ -84,12 +84,12 @@ public class OperationBean implements Serializable {
         this.start_time = start_time;
     }
 
-    private long getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus() {
-        this.status = (long) 0;
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     @Override

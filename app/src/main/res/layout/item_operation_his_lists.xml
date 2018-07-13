@@ -214,52 +214,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:id="@+id/tv_submit"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="5dp"
-                            android:gravity="center"
-                            android:clickable="true"
-                            android:textSize="16dp"
-                            android:textColor="@color/btn_green"
-                            android:background="@drawable/bg_roundcorner_border_green"
-                            android:text="提交任务" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-                        <TextView
-                            android:id="@+id/tv_stop"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:clickable="true"
-                            android:layout_gravity="center"
-                            android:textSize="16dp"
-                            android:textColor="@color/white"
-                            android:background="@drawable/bg_roundcorner_full_green"
-                            android:text="中止任务" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
             </LinearLayout>
 
         </LinearLayout>

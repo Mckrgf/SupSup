@@ -76,7 +76,7 @@ public class MyApplication extends Application implements AMapLocationListener {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        bean.setStatus();
+        bean.setStatus(0);
         bean.setSystem_type("300xp");
         bean.setEquipment(equipments);
         op_data.add(bean);
@@ -96,7 +96,7 @@ public class MyApplication extends Application implements AMapLocationListener {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        bean1.setStatus();
+        bean1.setStatus(0);
         bean1.setEquipment(equipments1);
         bean1.setSystem_type("700");
         op_data.add(bean1);
