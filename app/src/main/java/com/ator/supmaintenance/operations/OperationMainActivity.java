@@ -134,6 +134,7 @@ public class OperationMainActivity extends AppCompatActivity implements View.OnC
                 et_project = dialog.getWindow().findViewById(R.id.et_project);
                 et_operator = dialog.getWindow().findViewById(R.id.et_operator);
                 et_time = dialog.getWindow().findViewById(R.id.et_time);
+                et_operator.setText(UserUtil.getInstance().mCurEmployee.name);
                 et_time.setText(MyDateUtils.getCurTime(MyDateUtils.date_Format2));
                 rb_700 = dialog.getWindow().findViewById(R.id.rb_700);
                 rb_300 = dialog.getWindow().findViewById(R.id.rb_300);
