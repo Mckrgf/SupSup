@@ -145,14 +145,26 @@ public class FirstActivity extends BaseActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.iv_runrec:
-//                RtEnv.startActivity(MainActivity.class);
-                RtEnv.startActivity(OperationMainActivity.class);
-                break;
-            case R.id.loc_query:
+            case R.id.iv_runrec://1
                 RtEnv.startActivity(LocationActivity.class);
                 break;
-            case R.id.ai_btn:
+            case R.id.loc_query://2
+                RtEnv.startActivity(TempTaskListActivity.class);
+                break;
+            case R.id.ai_btn://4
+                RtEnv.startActivity(MyNFCActivity.class);
+                break;
+            case R.id.inspection_btn://0
+                //                RtEnv.startActivity(MainActivity.class);
+                RtEnv.startActivity(OperationMainActivity.class);
+                break;
+            case R.id.ll_setting:
+                RtEnv.startActivity(SettingsActivity.class);
+                break;
+            case R.id.nfc_btn:
+
+                break;
+            case R.id.iv_temptask://3
                 if (mNetState == MyNetHelper.NETWORK_NONE)
                 {
                     Toast.makeText(getApplicationContext(), "请先联入网络", Toast.LENGTH_LONG).show();
@@ -160,24 +172,13 @@ public class FirstActivity extends BaseActivity implements View.OnClickListener 
                     RtEnv.startActivity(AIActivity.class);
                 }
                 break;
-            case R.id.inspection_btn:
-                RtEnv.startActivity(InspectionMainActivity.class);
-                break;
-            case R.id.ll_setting:
-                RtEnv.startActivity(SettingsActivity.class);
-                break;
-            case R.id.nfc_btn:
-                RtEnv.startActivity(MyNFCActivity.class);
-                break;
-            case R.id.iv_temptask:
-                RtEnv.startActivity(TempTaskListActivity.class);
-                break;
             case R.id.ll_user:
                 RtEnv.startActivity(LoginActivity.class);
                 break;
             case R.id.iv_setting:
                 RtEnv.startActivity(SettingsActivity.class);
                 break;
+
 
         }
     }
