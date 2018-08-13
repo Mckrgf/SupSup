@@ -20,7 +20,12 @@ public class OperationBean implements Serializable {
     private ArrayList<String> equipment;     //项目中设备列表
 
     public ArrayList<String> getEquipment() {
-        return equipment;
+        if (equipment != null) {
+            return equipment;
+        } else {
+            ArrayList<String> eqs = new ArrayList();
+            return eqs;
+        }
     }
 
     public void setEquipment(ArrayList<String> equipment) {

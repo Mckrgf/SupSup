@@ -1,5 +1,6 @@
 package com.ator.supmaintenance_va.operations;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -10,13 +11,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ator.supmaintenance_va.R;
+import com.ator.supmaintenance_va.act.MainActivity;
 import com.ator.supmaintenance_va.item.MyApplication;
 import com.ator.supmaintenance_va.item.MyDateUtils;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -109,7 +114,12 @@ public class OperationDetailActivity extends AppCompatActivity implements View.O
                 if (et_eq.getText().toString().equals("")){
                     Toast.makeText(OperationDetailActivity.this,"装置名称不能为空",Toast.LENGTH_SHORT).show();
                 }else {
-                    bean.getEquipment().add(et_eq.getText().toString());
+//                    bean.getEquipment().add(et_eq.getText().toString());
+
+                    ArrayList<String> eqs = bean.getEquipment();
+                    eqs.add(et_eq.getText().toString());
+                    bean.setEquipment(eqs);
+
                     MyApplication.op_data.remove(pos);
                     MyApplication.op_data.add(pos,bean);
                     dialog.dismiss();
@@ -133,21 +143,32 @@ public class OperationDetailActivity extends AppCompatActivity implements View.O
         @Override
         public void onBindViewHolder(Adapter.OpViewHolder holder, int position) {
             holder.tv_eq_name.setText(bean.getEquipment().get(position));
+            holder.item_op_list.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(OperationDetailActivity.this, MainActivity.class);
+                    intent.putExtra("type",bean.getSystem_type());
+                    startActivity(intent);
+                }
+            });
         }
 
         @Override
         public int getItemCount() {
-            return bean.getEquipment().size();
+            ArrayList eqs = bean.getEquipment();
+            return eqs.size();
         }
 
         class OpViewHolder extends RecyclerView.ViewHolder {
 
             private TextView tv_eq_name;
+            private LinearLayout item_op_list;
 
             OpViewHolder(View itemView) {
                 super(itemView);
 
                 tv_eq_name = itemView.findViewById(R.id.tv_eq_name);
+                item_op_list = itemView.findViewById(R.id.item_op_list);
 
             }
         }

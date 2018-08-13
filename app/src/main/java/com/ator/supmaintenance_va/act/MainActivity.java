@@ -62,6 +62,34 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewById(R.id.scnet_check_button).setOnClickListener(this);
         findViewById(R.id.system_power_check_button).setOnClickListener(this);
 
+        String type = getIntent().getStringExtra("type");
+        if (type.contains("3")) {
+            findViewById(R.id.power_all_button).        setVisibility(View.GONE);
+            findViewById(R.id.power_cabinet_button).    setVisibility(View.GONE);
+            findViewById(R.id.ground_check_button).     setVisibility(View.GONE);
+            findViewById(R.id.run_check_button).        setVisibility(View.GONE);
+            findViewById(R.id.controller_check_button). setVisibility(View.GONE);
+            findViewById(R.id.opstation_check_button).  setVisibility(View.GONE);
+            findViewById(R.id.system_info_button).      setVisibility(View.GONE);
+        }else if (type.contains("7")) {
+            findViewById(R.id.cabinet_corrosion_detection_button).          setVisibility(View.GONE);
+            findViewById(R.id.control_cabine_button).                       setVisibility(View.GONE);
+            findViewById(R.id.control_cabine_power_button).                 setVisibility(View.GONE);
+            findViewById(R.id.control_room_button).                         setVisibility(View.GONE);
+            findViewById(R.id.control_room_power_magnetism_button).         setVisibility(View.GONE);
+            findViewById(R.id.master_card_check_button).                    setVisibility(View.GONE);
+            findViewById(R.id.operating_station_button).                    setVisibility(View.GONE);
+            findViewById(R.id.operating_station_check_button).              setVisibility(View.GONE);
+            findViewById(R.id.operating_station_corrosion_detection_button).setVisibility(View.GONE);
+            findViewById(R.id.operating_station_power_button).              setVisibility(View.GONE);
+            findViewById(R.id.power_check_button).                          setVisibility(View.GONE);
+            findViewById(R.id.power_system_button).                         setVisibility(View.GONE);
+            findViewById(R.id.room_corrosion_detection_button).             setVisibility(View.GONE);
+            findViewById(R.id.sbus_check_button).                           setVisibility(View.GONE);
+            findViewById(R.id.scnet_check_button).                          setVisibility(View.GONE);
+            findViewById(R.id.system_power_check_button).                   setVisibility(View.GONE);
+        }
+
 
         initTop();
 
