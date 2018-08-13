@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ator.supmaintenance.act.NFCCardActivity">
+    tools:context="com.ator.supmaintenance_va.act.NFCCardActivity">
 
     <include layout="@layout/all_sub_top"/>
 

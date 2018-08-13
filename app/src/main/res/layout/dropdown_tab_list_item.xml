@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.ator.supmaintenance.item.DropdownListItemView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.ator.supmaintenance_va.item.DropdownListItemView xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
     android:layout_height="48dp"
@@ -15,4 +15,4 @@
     android:textColor="@color/font_black_6"
     android:textSize="15sp">
 
-</com.ator.supmaintenance.item.DropdownListItemView>
+</com.ator.supmaintenance_va.item.DropdownListItemView>

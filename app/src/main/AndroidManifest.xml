@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ator.supmaintenance">
+    package="com.ator.supmaintenance_va">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
@@ -44,7 +44,7 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
 
     <application
-        android:name=".item.MyApplication"
+        android:name="com.ator.supmaintenance_va.item.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -57,7 +57,7 @@
         <service android:name="com.amap.api.location.APSService" />
 
         <activity
-            android:name=".act.LoadingActivity"
+            android:name="com.ator.supmaintenance_va.act.LoadingActivity"
             android:finishOnTaskLaunch="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -67,11 +67,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".act.MainActivity"
+            android:name="com.ator.supmaintenance_va.act.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.MyNFCActivity"
+            android:name="com.ator.supmaintenance_va.act.MyNFCActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -96,151 +96,151 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".act.tables.PowerAllActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.PowerAllActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.CabinetActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.CabinetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.GroundCheckActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.GroundCheckActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.SysRunActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.SysRunActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.ControllerCheckActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.ControllerCheckActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.OpStationCheckActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.OpStationCheckActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.SysInfoActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.SysInfoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.FirstActivity"
+            android:name="com.ator.supmaintenance_va.act.FirstActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.LocationActivity"
+            android:name="com.ator.supmaintenance_va.act.LocationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.HisFileListActivity"
+            android:name="com.ator.supmaintenance_va.act.HisFileListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.QueryResultActivity"
+            android:name="com.ator.supmaintenance_va.act.QueryResultActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.AIActivity"
+            android:name="com.ator.supmaintenance_va.act.AIActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-        <activity android:name=".act.IDCardActivity" />
+        <activity android:name="com.ator.supmaintenance_va.act.IDCardActivity" />
         <activity
-            android:name=".act.GuestActivity"
+            android:name="com.ator.supmaintenance_va.act.GuestActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.QRCodeActivity"
+            android:name="com.ator.supmaintenance_va.act.QRCodeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.LoginActivity"
+            android:name="com.ator.supmaintenance_va.act.LoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.InspectionMainActivity"
+            android:name="com.ator.supmaintenance_va.act.InspectionMainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.CardListActivity"
+            android:name="com.ator.supmaintenance_va.act.CardListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.CheckListsActivity"
+            android:name="com.ator.supmaintenance_va.act.CheckListsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.InputDataActivity"
+            android:name="com.ator.supmaintenance_va.act.InputDataActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.infraredActivity"
+            android:name="com.ator.supmaintenance_va.act.infraredActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.ShockMeasureActivity"
+            android:name="com.ator.supmaintenance_va.act.ShockMeasureActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.TempTaskListActivity"
+            android:name="com.ator.supmaintenance_va.act.TempTaskListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.SettingsActivity"
+            android:name="com.ator.supmaintenance_va.act.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.AboutActivity"
+            android:name="com.ator.supmaintenance_va.act.AboutActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.ShowCheckPointActivity"
+            android:name="com.ator.supmaintenance_va.act.ShowCheckPointActivity"
             android:screenOrientation="portrait" />
 
         <service
-            android:name=".Service.MyTimerService"
+            android:name="com.ator.supmaintenance_va.Service.MyTimerService"
             android:enabled="true"
             android:exported="true" />
 
-        <receiver android:name=".Service.AlarmReceiver" />
+        <receiver android:name="com.ator.supmaintenance_va.Service.AlarmReceiver" />
 
         <activity
-            android:name=".act.NFCCardActivity"
+            android:name="com.ator.supmaintenance_va.act.NFCCardActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.QueryInspectionActivity"
+            android:name="com.ator.supmaintenance_va.act.QueryInspectionActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".act.MaintenMainActivity" />
+        <activity android:name="com.ator.supmaintenance_va.act.MaintenMainActivity" />
         <activity
-            android:name=".act.tables.CabinetCorrosionActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".act.tables.ControlCabinetActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.CabinetCorrosionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.ControlCabinetPowerActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.ControlCabinetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.ControlRoomActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.ControlCabinetPowerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.ControlRoomPowerMagnetismActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.ControlRoomActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.MasterCardCheckActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.ControlRoomPowerMagnetismActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.OperatingStationActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.MasterCardCheckActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.OperatingStationCorrosionDetectionActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.OperatingStationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.OperatingStationCheckActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.OperatingStationCorrosionDetectionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.OperatingStationPowerActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.OperatingStationCheckActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.PowerCheckActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.OperatingStationPowerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.PowerSystemActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.PowerCheckActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.RoomCorrosionDetectionActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.PowerSystemActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.SBUSCheckActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.RoomCorrosionDetectionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.SCNETCheckActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.SBUSCheckActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.tables.SystemPowerCheckActivity"
+            android:name="com.ator.supmaintenance_va.act.tables.SCNETCheckActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".act.NetSettingActivity" />
-        <activity android:name=".operations.OperationMainActivity" />
-        <activity android:name=".operations.OperationDetailActivity" />
-        <activity android:name=".operations.OperationHistoryActivity"></activity>
+        <activity
+            android:name="com.ator.supmaintenance_va.act.tables.SystemPowerCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ator.supmaintenance_va.act.NetSettingActivity" />
+        <activity android:name="com.ator.supmaintenance_va.operations.OperationMainActivity" />
+        <activity android:name="com.ator.supmaintenance_va.operations.OperationDetailActivity" />
+        <activity android:name="com.ator.supmaintenance_va.operations.OperationHistoryActivity"></activity>
     </application>
 
 </manifest>

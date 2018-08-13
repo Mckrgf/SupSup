@@ -31,7 +31,7 @@
                 android:background="@color/white"
                 android:gravity="center">
 
-                <com.ator.supmaintenance.item.DropdownButton
+                <com.ator.supmaintenance_va.item.DropdownButton
                     android:id="@+id/db_choosedate"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
@@ -42,7 +42,7 @@
                     android:layout_height="18dp"
                     android:background="#dddddd" />
 
-                <com.ator.supmaintenance.item.DropdownButton
+                <com.ator.supmaintenance_va.item.DropdownButton
                     android:id="@+id/db_choosetype"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
@@ -53,7 +53,7 @@
                     android:layout_height="18dp"
                     android:background="#dddddd" />
 
-                <com.ator.supmaintenance.item.DropdownButton
+                <com.ator.supmaintenance_va.item.DropdownButton
                     android:id="@+id/db_choosename"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
@@ -166,19 +166,19 @@
                 android:layout_marginBottom="200dp"
                 android:orientation="vertical">
 
-                <com.ator.supmaintenance.item.DropdownListView
+                <com.ator.supmaintenance_va.item.DropdownListView
                     android:id="@+id/dropdownDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" />
 
-                <com.ator.supmaintenance.item.DropdownListView
+                <com.ator.supmaintenance_va.item.DropdownListView
                     android:id="@+id/dropdownType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" />
 
-                <com.ator.supmaintenance.item.DropdownListView
+                <com.ator.supmaintenance_va.item.DropdownListView
                     android:id="@+id/dropdownName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -45,7 +45,7 @@
                     android:orientation="horizontal"
                     android:gravity="right|center_vertical">
 
-                    <com.ator.supmaintenance.UI.MyScrollBar
+                    <com.ator.supmaintenance_va.UI.MyScrollBar
                         android:id="@+id/msgout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
