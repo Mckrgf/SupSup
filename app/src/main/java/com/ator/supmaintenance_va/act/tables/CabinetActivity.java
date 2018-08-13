@@ -25,6 +25,7 @@ public class CabinetActivity extends BaseActivity implements View.OnClickListene
 
     private ImageView mivAdd;
 
+
     public CabinetAdapter adapter = new CabinetAdapter();
     private boolean do_not_save_file = false;
 
